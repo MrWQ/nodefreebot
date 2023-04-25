@@ -21,7 +21,7 @@ jobs:
         pip install requests
     - name: run py script
       run: |
-        python main.py
+        python getnode.py
     - name: commit
       run: |
         git config --global user.email mrwq@qq.com

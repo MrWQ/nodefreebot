@@ -5,56 +5,56 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: _SG_新加坡, server: 54.179.30.188, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: _US_美国, server: 137.175.18.86, port: 42002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 2, server: 137.175.63.135, port: 59009, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _CN_中国->🇭🇰_HK_香港, server: yd.huojian666.xyz, port: 41687, type: trojan, password: e8c7b4f7-dd99-458a-a5c5-d40edcbf662e, sni: hkyp.apirocket.xyz, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 3, server: 45.86.11.199, port: 44101, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _HK_香港, server: 16.163.157.8, port: 443, type: vmess, uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: _US_美国 4, server: 142.4.114.21, port: 34002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 5, server: 198.2.218.220, port: 51202, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _CN_中国->🇭🇰_HK_香港 2, server: yd.huojian666.xyz, port: 14256, type: trojan, password: e8c7b4f7-dd99-458a-a5c5-d40edcbf662e, sni: hka.apirocket.xyz, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 6, server: 137.175.3.228, port: 53002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 7, server: 142.4.110.119, port: 50002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 8, server: 107.148.195.16, port: 50014, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _BZ_伯利兹->🇺🇸_US_美国, server: 203.30.188.100, port: 8880, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: lg.trump2023.net}}, udp: true}
-  - {name: _SG_新加坡 2, server: 3.0.78.149, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: _US_美国 9, server: cf.515188.xyz, port: 8080, type: vmess, uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /api/v3/download.getFile, headers: {Host: ssrsub.v02.ssrsub.com}}, udp: true}
-  - {name: _US_美国 10, server: 172.64.194.13, port: 8880, type: vmess, uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: lg.trump2023.net}}, udp: true}
-  - {name: _JP_日本, server: 43.206.233.169, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: _US_美国 11, server: 142.4.114.26, port: 34002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国->🇱🇺_LU_卢森堡, server: 162.159.255.205, port: 80, type: vmess, uuid: 52466dc2-3550-4310-910c-74b7bf8a020e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us-1.acyun.eu.org}}, udp: true}
+  - {name: _US_美国, server: 142.4.99.76, port: 41169, type: vmess, uuid: b65da4af-a12a-4a59-9316-4549e12ba62c, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 2, server: 198.2.198.28, port: 41288, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 3, server: 137.175.1.6, port: 53403, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _JP_日本, server: jp2.vfun.icu, port: 443, type: ssr, cipher: aes-256-cfb, password: vyunme, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 17422:TTp0SX, obfs-param: ab93117422.jd.hk, udp: true}
+  - {name: _US_美国 4, server: 192.74.242.153, port: 44667, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 5, server: 38.40.158.245, port: 45002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 6, server: 142.4.101.243, port: 57007, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 7, server: 45.131.229.59, port: 41602, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 8, server: 143.42.173.175, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: _US_美国 9, server: 171.22.134.30, port: 53433, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 10, server: 23.105.199.160, port: 25078, type: vmess, uuid: 964f9b2b-7ff1-4026-d4a9-41b824f4b3bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _CN_中国->🇹🇼_TW_台湾, server: assets.flareai.site, port: 15343, type: ss, cipher: chacha20-ietf-poly1305, password: d5dd371c-11db-4cfb-b458-072f0fbd0e18, udp: true}
+  - {name: _US_美国 11, server: 137.175.52.19, port: 33002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 12, server: 142.4.125.48, port: 50044, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 13, server: 192.74.231.176, port: 49202, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 14, server: 192.74.235.4, port: 44349, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 15, server: 140.99.149.45, port: 56882, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 16, server: scaleway.696960.xyz, port: 443, type: vmess, uuid: e357cd63-f1a5-4c8e-c42e-26da11207fee, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: scaleway.696960.xyz}}, udp: true}
+  - {name: _US_美国 17, server: 38.63.17.180, port: 50702, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 18, server: 142.4.114.27, port: 34002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 19, server: 137.175.18.89, port: 42002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _CN_中国, server: v3-us.aliyun-obsd.xyz, port: 5632, type: ss, cipher: aes-128-gcm, password: f2ae2629-89da-452f-b1f6-544666600bb4, udp: true}
+  - {name: _CN_中国 2, server: 112.132.215.189, port: 50002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 20, server: 170.187.200.114, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: _US_美国 21, server: 23.105.199.160, port: 23903, type: vmess, uuid: 60b6c1a6-6306-4e28-91d9-8d2be2449ae8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国->🇳🇱_NL_荷兰, server: 156.225.67.126, port: 48823, type: vmess, uuid: 3a3c8a9c-334e-4360-adb8-a80a57ddcbbf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国->🇳🇱_NL_荷兰 2, server: 156.225.67.16, port: 45533, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _CH_瑞士, server: 195.15.243.26, port: 443, type: trojan, password: !<str> 4478, skip-cert-verify: true, udp: true}
+  - {name: _US_美国->🇬🇧_GB_英国, server: 172.67.86.87, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
   - {name: _KR_韩国, server: 43.201.46.199, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: _FR_法国, server: a1.veryfastnet1.tk, port: 32894, type: trojan, password: HchlVCfnXB, sni: jamaran.ir, skip-cert-verify: true, udp: true}
-  - {name: _HK_香港 2, server: tr.dns.tlz.asia, port: 1231, type: trojan, password: bHlD0P4J1B, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 12, server: lsb-gy.heinu.cf, port: 2096, type: vmess, uuid: d793c013-f596-4af9-de0a-2062bb864dd7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /@heinuhome, headers: {Host: lsb-gy.heinu.cf}}, udp: true}
-  - {name: _US_美国 13, server: germany1.unlimiteddev.co, port: 80, type: vmess, uuid: 97ea79a6-615c-4ad7-8083-4f3b49cbe8a2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: germany1.unlimiteddev.co}}, udp: true}
-  - {name: _US_美国->🇬🇧_GB_英国, server: 172.67.199.253, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
-  - {name: _US_美国 14, server: 143.42.99.183, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: _IN_印度, server: v2test1.mark20web.pw, port: 2096, type: vmess, uuid: f9285a7d-34fb-4723-9ab0-9a70f735b146, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: v2test1.mark20web.pw}}, udp: true}
-  - {name: _NL_荷兰, server: 154.84.1.48, port: 43313, type: vmess, uuid: bd249e37-7359-41ee-84a7-09e49e0ec5c4, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国->🇬🇧_GB_英国 2, server: 172.67.113.82, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
-  - {name: _GB_英国, server: 83.142.225.32, port: 443, type: vmess, uuid: 5267ca71-97e6-44c8-8fb5-9fe4afe0954e, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/220128071100}, udp: true}
-  - {name: _US_美国->🇬🇧_GB_英国 3, server: 172.67.57.22, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
-  - {name: _JP_日本 2, server: jp02-vm0.entry.srthdw.art, port: 444, type: vmess, uuid: 9f8bddb3-8769-3925-ac92-534ac6b1b06b, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国->🇳🇱_NL_荷兰, server: 156.225.67.213, port: 47134, type: vmess, uuid: 3ca912da-6ac2-418f-b9cf-45b6f694579b, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国->🇩🇪_DE_德国, server: cf.noaries.de, port: 8880, type: vmess, uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/aries?ed=2048", headers: {Host: contabo-de.cloudflare.quest}}, udp: true}
-  - {name: _FR_法国 2, server: 54.37.185.148, port: 32894, type: trojan, password: HchlVCfnXB, sni: fararu.com, skip-cert-verify: true, udp: true}
-  - {name: _US_美国->🇫🇷_FR_法国, server: fr2.cachexy.ga, port: 80, type: vmess, uuid: c8c9867b-df9a-4217-8161-67824e20cb57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /g5D0hFMY/, headers: {Host: fr2.cachexy.ga}}, udp: true}
-  - {name: _JP_日本 3, server: dcbbe37e-rtixs0-xn6w.jp.p5pv.com, port: 80, type: vmess, uuid: 95f90aaa-2bb2-11eb-ad8c-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dcbbe37e-rtixs0-xn6w.jp.p5pv.com}}, udp: true}
-  - {name: _US_美国->🇫🇷_FR_法国 2, server: mm.learnpropy.click, port: 2053, type: vmess, uuid: 8cab8fb7-4977-4ec2-8bba-2914dd43bfbd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /gsdg43575, headers: {Host: abs.learnpropy.click}}, udp: true}
-  - {name: _IR_伊朗->🇩🇪_DE_德国, server: 46.209.20.209, port: 31270, type: vmess, uuid: d591b877-8ae3-4f96-d327-4673a236e1c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
+  - {name: _US_美国->🇳🇱_NL_荷兰 3, server: 156.225.67.143, port: 51400, type: vmess, uuid: 990006bd-cb20-482f-9c97-f5fc65359605, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _CN_中国->🇯🇵_JP_日本, server: assets.flareai.site, port: 15443, type: ss, cipher: chacha20-ietf-poly1305, password: d5dd371c-11db-4cfb-b458-072f0fbd0e18, udp: true}
+  - {name: _JP_日本 2, server: 43.206.233.169, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: _JP_日本->🇺🇸_US_美国, server: iplc.sh.to.us.fp-dns.xyz, port: 34438, type: trojan, password: f0a9a2e2-0b62-4d46-a97c-c16eb25a88c7, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 22, server: cf-yd-dns.sharecentre.online, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}, udp: true}
+  - {name: _US_美国->🇬🇧_GB_英国 2, server: 162.159.138.245, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: uk1.scproxy.top}}, udp: true}
+  - {name: _US_美国 23, server: cf.noaries.de, port: 8880, type: vmess, uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/aries?ed=2048", headers: {Host: vnpt.iiio.wiki}}, udp: true}
+  - {name: _US_美国 24, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: ca.ilovescp.com}}, udp: true}
+  - {name: _FR_法国->🇬🇧_GB_英国, server: 51.195.35.151, port: 58812, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: _KR_韩国 2, server: 43.200.6.15, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: _KR_韩国 3, server: f-as2.wvvvv.eu.org, port: 1, type: vmess, uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _CN_中国->🇬🇧_GB_英国, server: 120.210.205.220, port: 36918, type: vmess, uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _US_美国 15, server: 172.67.127.123, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp1.scproxy.top}}, udp: true}
-  - {name: _US_美国 16, server: dp3.scproxy.top, port: 443, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dp3.scproxy.top}}, udp: true}
-  - {name: _SG_新加坡 3, server: 13.215.179.197, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: _CN_中国, server: 36.133.171.209, port: 11023, type: vmess, uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _CN_中国 2, server: 36.138.140.208, port: 11023, type: ss, cipher: aes-256-gcm, password: ll668668@, udp: true}
-  - {name: _GB_英国->🇳🇱_NL_荷兰, server: 185.193.30.158, port: 443, type: vmess, uuid: A59E320C-BAC6-45E3-8A27-1518610708D0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /speedtest, headers: {Host: Amsterdam.v2ray.online}}, udp: true}
-  - {name: _SG_新加坡 4, server: 00000000000000000000000000000000000000000000000000000000000006a.node-for-bigairport.win, port: 443, type: vmess, uuid: 34367fa9-7135-4018-80fe-0ca78d90a28b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: _SG_新加坡->🇮🇩_ID_印度尼西亚, server: asia.artunnel57.host, port: 80, type: vmess, uuid: 65e44501-defd-4609-a4e3-7028dc417b50, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: asia.artunnel57.host}}, udp: true}
+  - {name: _US_美国 25, server: vde2.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: vde2.0bad.com}}, udp: true}
+  - {name: _CN_中国->🇺🇸_US_美国, server: 120.240.163.51, port: 53173, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _FR_法国->🇧🇬_BG_保加利亚, server: 135.125.244.103, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: _US_美国 26, server: cf-lt-dns.sharecentre.online, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}, udp: true}
+  - {name: _US_美国 27, server: cf-dx-dns.sharecentre.online, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp3.scproxy.top}}, udp: true}
+  - {name: _US_美国 28, server: cf.noaries.de, port: 443, type: vmess, uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: "/aries?ed=2048", headers: {Host: dedipath.iiio.wiki}}, udp: true}
+  - {name: _US_美国 29, server: cf.noaries.de, port: 2086, type: vmess, uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/aries?ed=2048", headers: {Host: ovh.iiio.wiki}}, udp: true}
+  - {name: _US_美国 30, server: 43-153-34-170.ipv4.rush.ml, port: 8443, type: trojan, password: cf4295378e209e70d12c5bdd017144dfd1c772d3, sni: rajanews.com, skip-cert-verify: true, udp: true}
+  - {name: _CN_中国 3, server: 36.134.16.96, port: 11023, type: vmess, uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _US_美国 31, server: 172.67.127.123, port: 80, type: vmess, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: dp1.scproxy.top}}, udp: true}
 proxy-groups:
   - name: 🚀 全局设置
     type: select
@@ -72,111 +72,111 @@ proxy-groups:
   - name: 🚀 手动选择
     type: select
     proxies:
-      - _SG_新加坡
       - _US_美国
       - _US_美国 2
-      - _CN_中国->🇭🇰_HK_香港
       - _US_美国 3
-      - _HK_香港
+      - _JP_日本
       - _US_美国 4
       - _US_美国 5
-      - _CN_中国->🇭🇰_HK_香港 2
       - _US_美国 6
       - _US_美国 7
       - _US_美国 8
-      - _BZ_伯利兹->🇺🇸_US_美国
-      - _SG_新加坡 2
       - _US_美国 9
       - _US_美国 10
-      - _JP_日本
+      - _CN_中国->🇹🇼_TW_台湾
       - _US_美国 11
-      - _US_美国->🇱🇺_LU_卢森堡
-      - _KR_韩国
-      - _FR_法国
-      - _HK_香港 2
       - _US_美国 12
       - _US_美国 13
-      - _US_美国->🇬🇧_GB_英国
       - _US_美国 14
-      - _IN_印度
-      - _NL_荷兰
-      - _US_美国->🇬🇧_GB_英国 2
-      - _GB_英国
-      - _US_美国->🇬🇧_GB_英国 3
-      - _JP_日本 2
-      - _US_美国->🇳🇱_NL_荷兰
-      - _US_美国->🇩🇪_DE_德国
-      - _FR_法国 2
-      - _US_美国->🇫🇷_FR_法国
-      - _JP_日本 3
-      - _US_美国->🇫🇷_FR_法国 2
-      - _IR_伊朗->🇩🇪_DE_德国
-      - _KR_韩国 2
-      - _KR_韩国 3
-      - _CN_中国->🇬🇧_GB_英国
       - _US_美国 15
       - _US_美国 16
-      - _SG_新加坡 3
+      - _US_美国 17
+      - _US_美国 18
+      - _US_美国 19
       - _CN_中国
       - _CN_中国 2
-      - _GB_英国->🇳🇱_NL_荷兰
-      - _SG_新加坡 4
-      - _SG_新加坡->🇮🇩_ID_印度尼西亚
+      - _US_美国 20
+      - _US_美国 21
+      - _US_美国->🇳🇱_NL_荷兰
+      - _US_美国->🇳🇱_NL_荷兰 2
+      - _CH_瑞士
+      - _US_美国->🇬🇧_GB_英国
+      - _KR_韩国
+      - _US_美国->🇳🇱_NL_荷兰 3
+      - _CN_中国->🇯🇵_JP_日本
+      - _JP_日本 2
+      - _JP_日本->🇺🇸_US_美国
+      - _US_美国 22
+      - _US_美国->🇬🇧_GB_英国 2
+      - _US_美国 23
+      - _US_美国 24
+      - _FR_法国->🇬🇧_GB_英国
+      - _KR_韩国 2
+      - _US_美国 25
+      - _CN_中国->🇺🇸_US_美国
+      - _FR_法国->🇧🇬_BG_保加利亚
+      - _US_美国 26
+      - _US_美国 27
+      - _US_美国 28
+      - _US_美国 29
+      - _US_美国 30
+      - _CN_中国 3
+      - _US_美国 31
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - _SG_新加坡
       - _US_美国
       - _US_美国 2
-      - _CN_中国->🇭🇰_HK_香港
       - _US_美国 3
-      - _HK_香港
+      - _JP_日本
       - _US_美国 4
       - _US_美国 5
-      - _CN_中国->🇭🇰_HK_香港 2
       - _US_美国 6
       - _US_美国 7
       - _US_美国 8
-      - _BZ_伯利兹->🇺🇸_US_美国
-      - _SG_新加坡 2
       - _US_美国 9
       - _US_美国 10
-      - _JP_日本
+      - _CN_中国->🇹🇼_TW_台湾
       - _US_美国 11
-      - _US_美国->🇱🇺_LU_卢森堡
-      - _KR_韩国
-      - _FR_法国
-      - _HK_香港 2
       - _US_美国 12
       - _US_美国 13
-      - _US_美国->🇬🇧_GB_英国
       - _US_美国 14
-      - _IN_印度
-      - _NL_荷兰
-      - _US_美国->🇬🇧_GB_英国 2
-      - _GB_英国
-      - _US_美国->🇬🇧_GB_英国 3
-      - _JP_日本 2
-      - _US_美国->🇳🇱_NL_荷兰
-      - _US_美国->🇩🇪_DE_德国
-      - _FR_法国 2
-      - _US_美国->🇫🇷_FR_法国
-      - _JP_日本 3
-      - _US_美国->🇫🇷_FR_法国 2
-      - _IR_伊朗->🇩🇪_DE_德国
-      - _KR_韩国 2
-      - _KR_韩国 3
-      - _CN_中国->🇬🇧_GB_英国
       - _US_美国 15
       - _US_美国 16
-      - _SG_新加坡 3
+      - _US_美国 17
+      - _US_美国 18
+      - _US_美国 19
       - _CN_中国
       - _CN_中国 2
-      - _GB_英国->🇳🇱_NL_荷兰
-      - _SG_新加坡 4
-      - _SG_新加坡->🇮🇩_ID_印度尼西亚
+      - _US_美国 20
+      - _US_美国 21
+      - _US_美国->🇳🇱_NL_荷兰
+      - _US_美国->🇳🇱_NL_荷兰 2
+      - _CH_瑞士
+      - _US_美国->🇬🇧_GB_英国
+      - _KR_韩国
+      - _US_美国->🇳🇱_NL_荷兰 3
+      - _CN_中国->🇯🇵_JP_日本
+      - _JP_日本 2
+      - _JP_日本->🇺🇸_US_美国
+      - _US_美国 22
+      - _US_美国->🇬🇧_GB_英国 2
+      - _US_美国 23
+      - _US_美国 24
+      - _FR_法国->🇬🇧_GB_英国
+      - _KR_韩国 2
+      - _US_美国 25
+      - _CN_中国->🇺🇸_US_美国
+      - _FR_法国->🇧🇬_BG_保加利亚
+      - _US_美国 26
+      - _US_美国 27
+      - _US_美国 28
+      - _US_美国 29
+      - _US_美国 30
+      - _CN_中国 3
+      - _US_美国 31
   - name: 🎯 国内网络
     type: select
     proxies:
@@ -368,16 +368,14 @@ proxy-groups:
   - name: 🇭🇰 香港节点
     type: select
     proxies:
-      - _CN_中国->🇭🇰_HK_香港
-      - _HK_香港
-      - _CN_中国->🇭🇰_HK_香港 2
-      - _HK_香港 2
+      - DIRECT
   - name: 🇯🇵 日本节点
     type: select
     proxies:
       - _JP_日本
+      - _CN_中国->🇯🇵_JP_日本
       - _JP_日本 2
-      - _JP_日本 3
+      - _JP_日本->🇺🇸_US_美国
   - name: 🇺🇲 美国节点
     type: select
     proxies:
@@ -389,41 +387,49 @@ proxy-groups:
       - _US_美国 6
       - _US_美国 7
       - _US_美国 8
-      - _BZ_伯利兹->🇺🇸_US_美国
       - _US_美国 9
       - _US_美国 10
       - _US_美国 11
-      - _US_美国->🇱🇺_LU_卢森堡
       - _US_美国 12
       - _US_美国 13
-      - _US_美国->🇬🇧_GB_英国
       - _US_美国 14
-      - _US_美国->🇬🇧_GB_英国 2
-      - _US_美国->🇬🇧_GB_英国 3
-      - _US_美国->🇳🇱_NL_荷兰
-      - _US_美国->🇩🇪_DE_德国
-      - _US_美国->🇫🇷_FR_法国
-      - _US_美国->🇫🇷_FR_法国 2
       - _US_美国 15
       - _US_美国 16
+      - _US_美国 17
+      - _US_美国 18
+      - _US_美国 19
+      - _US_美国 20
+      - _US_美国 21
+      - _US_美国->🇳🇱_NL_荷兰
+      - _US_美国->🇳🇱_NL_荷兰 2
+      - _US_美国->🇬🇧_GB_英国
+      - _US_美国->🇳🇱_NL_荷兰 3
+      - _JP_日本->🇺🇸_US_美国
+      - _US_美国 22
+      - _US_美国->🇬🇧_GB_英国 2
+      - _US_美国 23
+      - _US_美国 24
+      - _US_美国 25
+      - _CN_中国->🇺🇸_US_美国
+      - _US_美国 26
+      - _US_美国 27
+      - _US_美国 28
+      - _US_美国 29
+      - _US_美国 30
+      - _US_美国 31
   - name: 🇸🇬 新加坡节点
     type: select
     proxies:
-      - _SG_新加坡
-      - _SG_新加坡 2
-      - _SG_新加坡 3
-      - _SG_新加坡 4
-      - _SG_新加坡->🇮🇩_ID_印度尼西亚
+      - DIRECT
   - name: 🇨🇳 台湾节点
     type: select
     proxies:
-      - DIRECT
+      - _CN_中国->🇹🇼_TW_台湾
   - name: 🇰🇷 韩国节点
     type: select
     proxies:
       - _KR_韩国
       - _KR_韩国 2
-      - _KR_韩国 3
   - name: 🎥 奈飞节点
     type: select
     proxies:
@@ -3047,6 +3053,7 @@ rules:
  - DOMAIN-SUFFIX,aniscartujo.com,🚀 全局设置
  - DOMAIN-SUFFIX,annatam.com,🚀 全局设置
  - DOMAIN-SUFFIX,anobii.com,🚀 全局设置
+ - DOMAIN-SUFFIX,anonfiles.com,🚀 全局设置
  - DOMAIN-SUFFIX,anontext.com,🚀 全局设置
  - DOMAIN-SUFFIX,anonymitynetwork.com,🚀 全局设置
  - DOMAIN-SUFFIX,anonymizer.com,🚀 全局设置
@@ -3712,6 +3719,7 @@ rules:
  - DOMAIN-SUFFIX,cloudcone.com,🚀 全局设置
  - DOMAIN-SUFFIX,cloudflare-ipfs.com,🚀 全局设置
  - DOMAIN-SUFFIX,cloudfront.net,🚀 全局设置
+ - DOMAIN-SUFFIX,cloudfunctions.net,🚀 全局设置
  - DOMAIN-SUFFIX,club1069.com,🚀 全局设置
  - DOMAIN-SUFFIX,clubhouseapi.com,🚀 全局设置
  - DOMAIN-SUFFIX,clyp.it,🚀 全局设置
@@ -5486,6 +5494,7 @@ rules:
  - DOMAIN-SUFFIX,italiatibet.org,🚀 全局设置
  - DOMAIN-SUFFIX,itasoftware.com,🚀 全局设置
  - DOMAIN-SUFFIX,itemdb.com,🚀 全局设置
+ - DOMAIN-SUFFIX,itemfix.com,🚀 全局设置
  - DOMAIN-SUFFIX,ithome.com.tw,🚀 全局设置
  - DOMAIN-SUFFIX,itsaol.com,🚀 全局设置
  - DOMAIN-SUFFIX,itshidden.com,🚀 全局设置
@@ -5741,6 +5750,7 @@ rules:
  - DOMAIN-SUFFIX,le-vpn.com,🚀 全局设置
  - DOMAIN-SUFFIX,leafyvpn.net,🚀 全局设置
  - DOMAIN-SUFFIX,lecloud.net,🚀 全局设置
+ - DOMAIN-SUFFIX,ledger.com,🚀 全局设置
  - DOMAIN-SUFFIX,leeao.com.cn,🚀 全局设置
  - DOMAIN-SUFFIX,lefora.com,🚀 全局设置
  - DOMAIN-SUFFIX,left21.hk,🚀 全局设置
@@ -6450,6 +6460,7 @@ rules:
  - DOMAIN-SUFFIX,okx.com,🚀 全局设置
  - DOMAIN-SUFFIX,olabloga.pl,🚀 全局设置
  - DOMAIN-SUFFIX,old-cat.net,🚀 全局设置
+ - DOMAIN-SUFFIX,olehdtv.com,🚀 全局设置
  - DOMAIN-SUFFIX,olevod.com,🚀 全局设置
  - DOMAIN-SUFFIX,olumpo.com,🚀 全局设置
  - DOMAIN-SUFFIX,olympicwatch.org,🚀 全局设置
@@ -15357,6 +15368,7 @@ rules:
  - DOMAIN-SUFFIX,bytetos.com,🎯 国内网络
  - DOMAIN-SUFFIX,bytexservice.com,🎯 国内网络
  - DOMAIN-SUFFIX,douyin.com,🎯 国内网络
+ - DOMAIN-SUFFIX,douyincdn.com,🎯 国内网络
  - DOMAIN-SUFFIX,douyinpic.com,🎯 国内网络
  - DOMAIN-SUFFIX,douyinstatic.com,🎯 国内网络
  - DOMAIN-SUFFIX,douyinvod.com,🎯 国内网络
@@ -15511,6 +15523,7 @@ rules:
  - DOMAIN,st.dl.bscstorage.net,🎯 国内网络
  - DOMAIN,st.dl.eccdnx.com,🎯 国内网络
  - DOMAIN,st.dl.pinyuncloud.com,🎯 国内网络
+ - DOMAIN,xz.pphimalayanrt.com,🎯 国内网络
  - DOMAIN,steampipe.steamcontent.tnkjmec.com,🎯 国内网络
  - DOMAIN,steampowered.com.8686c.com,🎯 国内网络
  - DOMAIN,steamstatic.com.8686c.com,🎯 国内网络

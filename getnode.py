@@ -38,7 +38,7 @@ def get_node_dy_url():
     print(latest_page_url)
     if latest_page_url:
         html = requests.get(latest_page_url, headers=ua, timeout=5).content.decode()
-        dy_list = re.findall(r"<p>(https://nodefree.org/dy/.*?)</p>", html)
+        dy_list = re.findall(r"<p>(https://nodefree.githubrowcontent.com/.*?)</p>", html)
         return dy_list
     else:
         exit(-1)

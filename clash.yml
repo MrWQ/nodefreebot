@@ -46,247 +46,260 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
+  - name: 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
+    port: 8080
+    server: 45.87.175.171
+    type: ss
+    udp: true
+    password: cvII85TrW6n0OGyfpHVS1u
+    cipher: chacha20-ietf-poly1305
   - name: 🇺🇸_US_美国_1
-    port: 2376
-    server: 38.110.1.107
+    port: 4567
+    server: 51.120.10.54
     type: ss
     udp: true
-    password: faBAoD54k87UJG7
-    cipher: aes-256-gcm
+    password: vP8snDatg097c19A3eYPjU
+    cipher: chacha20-ietf-poly1305
   - name: 🇺🇸_US_美国_2
-    port: 6697
-    server: 38.110.1.102
-    type: ss
-    udp: true
-    password: TEzjfAYq2IjtuoS
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_3
-    port: 443
-    server: 23.150.152.41
-    type: ss
-    udp: true
-    password: pKEW8JPByTVTLtM
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_4
     port: 8090
     server: 167.88.61.111
     type: ss
     udp: true
     password: PCnnH6SQSnfoS27
     cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_5
-    port: 7306
-    server: 15.204.87.225
+  - name: 🇺🇸_US_美国_3
+    port: 6697
+    server: 142.202.49.119
     type: ss
     udp: true
-    password: FoOiGlkAA9yPEGP
+    password: TEzjfAYq2IjtuoS
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_4
+    port: 8888
+    server: 38.110.1.35
+    type: ss
+    udp: true
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - name: 🇷🇺_RU_俄罗斯_1
+    port: 9033
+    server: 217.30.10.18
+    type: ss
+    udp: true
+    password: UTJA57ypk2XKQpnm
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_5
+    port: 443
+    server: 142.202.49.119
+    type: ss
+    udp: true
+    password: pKEW8JPByTVTLtM
     cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_6
-    port: 6379
-    server: 23.157.40.113
+    port: 8091
+    server: 142.202.49.119
     type: ss
     udp: true
-    password: zDNVedRFPQexG9v
+    password: PCnnH6SQSnfoS27
     cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_7
-    port: 7002
-    server: 23.157.40.113
-    type: ss
-    udp: true
-    password: RexnBgU7EV5ADxG
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_8
-    port: 3389
-    server: 38.110.1.107
-    type: ss
-    udp: true
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_9
-    port: 5000
-    server: 23.150.152.41
-    type: ss
-    udp: true
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_10
-    port: 3306
-    server: 38.110.1.107
-    type: ss
-    udp: true
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_11
-    port: 5600
-    server: 23.150.152.41
-    type: ss
-    udp: true
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_12
-    port: 5601
-    server: 23.150.152.41
-    type: ss
-    udp: true
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_13
-    port: 8080
-    server: 23.157.40.113
-    type: ss
-    udp: true
-    password: KixLvKzwjekG00rm
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_14
-    port: 2376
-    server: 38.114.114.143
-    type: ss
-    udp: true
-    password: faBAoD54k87UJG7
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_15
     port: 5004
-    server: 23.157.40.113
+    server: 38.110.1.35
     type: ss
     udp: true
     password: g5MeD6Ft3CWlJId
     cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_16
-    port: 5499
-    server: 15.204.87.225
+  - name: 🇪🇸_ES_西班牙->🇺🇸_US_美国
+    port: 14416
+    server: 150.241.95.62
     type: ss
     udp: true
-    password: lGqs95QkFHo2NV
+    password: -4-M1Q%$He
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇸_US_美国_8
+    port: 8008
+    server: 38.110.1.35
+    type: ss
+    udp: true
+    password: XKFKl2rULjIp74
     cipher: aes-256-gcm
+  - name: 🇨🇿_CZ_捷克->🇺🇸_US_美国
+    port: 19175
+    server: ams1.fromblancwithlove.com
+    type: ss
+    udp: true
+    password: 5Au7NhFmcBqMnika4KVk7h4ZdV3wD4hFtJ8PJ3AlHzLeU1chEBaz19a643q7hBPV
+    cipher: chacha20-ietf-poly1305
+  - name: 🇨🇳_CN_中国
+    port: 8080
+    server: 107.155.57.51
+    type: ss
+    udp: true
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: 🇺🇸_US_美国_9
+    port: 8009
+    server: 142.202.49.119
+    type: ss
+    udp: true
+    password: XKFKl2rULjIp74
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_10
+    port: 7307
+    server: 142.202.49.119
+    type: ss
+    udp: true
+    password: FoOiGlkAA9yPEGP
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_11
+    port: 2376
+    server: 23.157.88.61
+    type: ss
+    udp: true
+    password: faBAoD54k87UJG7
+    cipher: aes-256-gcm
+  - name: 🇷🇺_RU_俄罗斯_2
+    port: 9060
+    server: 217.30.10.18
+    type: ss
+    udp: true
+    password: ueLXVkvh4hckhErQ
+    cipher: aes-256-cfb
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
+      - 🇪🇸_ES_西班牙->🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇨🇿_CZ_捷克->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
       - 🇺🇸_US_美国_9
       - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_16
+      - 🇷🇺_RU_俄罗斯_2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
+      - 🇪🇸_ES_西班牙->🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇨🇿_CZ_捷克->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
       - 🇺🇸_US_美国_9
       - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_16
+      - 🇷🇺_RU_俄罗斯_2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
+      - 🇪🇸_ES_西班牙->🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇨🇿_CZ_捷克->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
       - 🇺🇸_US_美国_9
       - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_16
+      - 🇷🇺_RU_俄罗斯_2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
+      - 🇪🇸_ES_西班牙->🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇨🇿_CZ_捷克->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
       - 🇺🇸_US_美国_9
       - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_16
+      - 🇷🇺_RU_俄罗斯_2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
+      - 🇪🇸_ES_西班牙->🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇨🇿_CZ_捷克->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
       - 🇺🇸_US_美国_9
       - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_16
+      - 🇷🇺_RU_俄罗斯_2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
+      - 🇪🇸_ES_西班牙->🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇨🇿_CZ_捷克->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
       - 🇺🇸_US_美国_9
       - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_16
+      - 🇷🇺_RU_俄罗斯_2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -309,22 +322,23 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇩🇪_DE_德国->🇱🇺_LU_卢森堡
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
+      - 🇪🇸_ES_西班牙->🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇨🇿_CZ_捷克->🇺🇸_US_美国
+      - 🇨🇳_CN_中国
       - 🇺🇸_US_美国_9
       - 🇺🇸_US_美国_10
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_16
+      - 🇷🇺_RU_俄罗斯_2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

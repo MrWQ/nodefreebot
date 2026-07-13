@@ -24,6 +24,7 @@ def get_latest_page():
     获取最新节点发布页面
     :return:
     """
+    ua["referer"] = node_url
     html = requests.get(base_url, headers=ua, timeout=5).content.decode()
     # print(html)
     latest_page_url = None
@@ -41,7 +42,10 @@ def get_node_dy_url():
     latest_page_url = get_latest_page()
     print(latest_page_url)
     if latest_page_url:
-        html = requests.get(latest_page_url, headers=ua, timeout=5).content.decode()
+        req = requests.get(latest_page_url, headers=ua, timeout=5)
+        status_code = req.status_code
+        html = req.content.decode()
+        print(latest_page_url, status_code, html)
         dy_list = re.findall(rf"<p>({node_url}.*?)</p>", html)
         return dy_list
     else:

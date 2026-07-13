@@ -124,7 +124,7 @@ def main():
     local_clash_path = get_url_path(clash_dy_url)
 
     if local_v2ray_path == get_v2ray_latest_path() and local_clash_path == get_clash_latest_path():
-        exit(-2)
+        exit(0)
 
     # local_v2ray_dy = get_local_v2ray_dy()
     # local_clash_dy = get_local_clash_dy()

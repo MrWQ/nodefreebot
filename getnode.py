@@ -22,6 +22,10 @@ SUB_TYPES = {
     "mihomo": {"index": 2, "dy_file": "mihomo.yml", "latest_file": "mihomo_lastest_file.yml"},
 }
 
+cover_image_file = "cover.jpg"
+cover_lastest_file = "cover_lastest_file.txt"
+COVER_IMG_PATTERN = re.compile(r'<img[^>]+src="(https?://nodefree\.me/wp-content/uploads/[^"]+480x300\.jpg)"')
+
 
 def get_latest_page():
     """获取最新节点发布页面"""
@@ -29,6 +33,37 @@ def get_latest_page():
     html = requests.get(base_url, headers=ua, timeout=5).content.decode()
     a = re.findall(rf"{base_url}p/\d+.html", html)
     return a[0] if a else None
+
+
+def get_homepage_html():
+    """获取首页 HTML"""
+    ua["referer"] = node_url
+    return requests.get(base_url, headers=ua, timeout=5).content.decode()
+
+
+def get_cover_images(html):
+    """从首页 HTML 中提取所有封面图片 URL"""
+    return COVER_IMG_PATTERN.findall(html)
+
+
+def get_cover_url_path(img_url):
+    """从封面图 URL 中提取日期路径，如 wp-content/uploads/2023/01/14-480x300.jpg"""
+    return img_url.replace(base_url, "")
+
+
+def save_cover_image(img_url):
+    """下载并保存封面图片到日期路径和根目录"""
+    resp = requests.get(img_url, headers=ua, timeout=10)
+    resp.raise_for_status()
+    # 按日期路径保存
+    local_path = get_cover_url_path(img_url)
+    filepath = Path(local_path)
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+    with open(local_path, "wb") as f:
+        f.write(resp.content)
+    # 根目录保存最新封面
+    with open(cover_image_file, "wb") as f:
+        f.write(resp.content)
 
 
 def get_node_dy_url():
@@ -39,7 +74,7 @@ def get_node_dy_url():
         exit(-1)
     req = requests.get(latest_page_url, headers=ua, timeout=5)
     html = req.content.decode()
-    print(latest_page_url, req.status_code, html)
+    # print(latest_page_url, req.status_code, html)
     return re.findall(rf"<p>({node_url}.*?)</p>", html)
 
 
@@ -56,7 +91,8 @@ def get_saved_latest_path(latest_file):
     try:
         with open(latest_file, "r", encoding="utf8") as f:
             return f.read()
-    except:
+    except Exception as e:
+        print(e)
         return False
 
 
@@ -103,6 +139,24 @@ def main():
         save_latest_path(cfg["latest_file"], local_path)  # 记录最新路径
         save_to_file(local_path, content)                  # 按日期路径保存
         save_to_file(cfg["dy_file"], content)              # 根目录保存最新内容
+
+    # 保存最新封面图片
+    try:
+        html = get_homepage_html()
+        images = get_cover_images(html)
+        if images:
+            img_url = images[0]
+            cover_path = get_cover_url_path(img_url)
+            if cover_path != get_saved_latest_path(cover_lastest_file):
+                print(f"找到 {len(images)} 张封面图，保存最新: {img_url}")
+                save_cover_image(img_url)
+                save_latest_path(cover_lastest_file, cover_path)
+            else:
+                print("封面图片未更新")
+        else:
+            print("未找到封面图片")
+    except Exception as e:
+        print(f"获取封面图片失败: {e}")
 
 
 if __name__ == "__main__":

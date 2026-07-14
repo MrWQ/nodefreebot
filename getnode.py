@@ -10,139 +10,100 @@ from pathlib import Path
 
 base_url = "https://nodefree.me/"
 node_url = "https://node.nodefree.me/"
-ua = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0",
-      "referer": base_url
-      }
+ua = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0",
+    "referer": base_url,
+}
 
-v2ray_dy_file = "v2ray.txt"
-clash_dy_file = "clash.yml"
-v2ray_lastest_file = "v2ray_lastest_file.txt"
-clash_lastest_file = "clash_lastest_file.yml"
+# 每种订阅类型的配置：(索引, 主文件名, 最新路径记录文件)
+SUB_TYPES = {
+    "v2ray": {"index": 0, "dy_file": "v2ray.txt", "latest_file": "v2ray_lastest_file.txt"},
+    "clash": {"index": 1, "dy_file": "clash.yml", "latest_file": "clash_lastest_file.yml"},
+    "mihomo": {"index": 2, "dy_file": "mihomo.yml", "latest_file": "mihomo_lastest_file.yml"},
+}
+
 
 def get_latest_page():
-    """
-    获取最新节点发布页面
-    :return:
-    """
+    """获取最新节点发布页面"""
     ua["referer"] = node_url
     html = requests.get(base_url, headers=ua, timeout=5).content.decode()
-    # print(html)
-    latest_page_url = None
     a = re.findall(rf"{base_url}p/\d+.html", html)
-    if a:
-        latest_page_url = a[0]
-    return latest_page_url
+    return a[0] if a else None
 
 
 def get_node_dy_url():
-    """
-    获取v2ray和clash订阅链接
-    :return:
-    """
+    """获取所有订阅链接"""
     latest_page_url = get_latest_page()
     print(latest_page_url)
-    if latest_page_url:
-        req = requests.get(latest_page_url, headers=ua, timeout=5)
-        status_code = req.status_code
-        html = req.content.decode()
-        print(latest_page_url, status_code, html)
-        dy_list = re.findall(rf"<p>({node_url}.*?)</p>", html)
-        return dy_list
-    else:
+    if not latest_page_url:
         exit(-1)
+    req = requests.get(latest_page_url, headers=ua, timeout=5)
+    html = req.content.decode()
+    print(latest_page_url, req.status_code, html)
+    return re.findall(rf"<p>({node_url}.*?)</p>", html)
 
 
-def get_local_v2ray_dy():
-    with open(v2ray_dy_file, "r", encoding='utf8') as f:
-        return f.read()
-
-def get_local_clash_dy():
-    with open(clash_dy_file, "r", encoding='utf8') as f:
-        return f.read()
-
-def get_network_v2ray_dy(v2ray_dy_url):
-    file_content = requests.get(v2ray_dy_url, headers=ua, timeout=5).content.decode()
-    return file_content
-
-def get_network_clash_dy(clash_dy_url):
-    file_content = requests.get(clash_dy_url, headers=ua, timeout=5).content.decode()
-    return file_content
-
-def v2ray_dy_to_file(file_content):
-    with open(v2ray_dy_file, 'w', encoding='utf8') as f:
-        f.write(file_content)
-
-def clash_dy_to_file(file_content):
-    with open(clash_dy_file, 'w', encoding='utf8') as f:
-        f.write(file_content)
-
-def v2ray_dy_to_date_file(fpath, file_content):
-    filepath = Path(fpath)
-    filepath.parent.mkdir(parents=True, exist_ok=True)
-    with open(fpath, 'w', encoding='utf8') as f:
-        f.write(file_content)
-
-def clash_dy_to_date_file(fpath, file_content):
-    filepath = Path(fpath)
-    filepath.parent.mkdir(parents=True, exist_ok=True)
-    with open(fpath, 'w', encoding='utf8') as f:
-        f.write(file_content)
+def fetch_subscription(url):
+    """从网络获取订阅内容"""
+    return requests.get(url, headers=ua, timeout=5).content.decode()
 
 
 def get_url_path(url):
-    p = url.replace(node_url, "")
-    return p
+    return url.replace(node_url, "")
 
-def get_v2ray_latest_path():
+
+def get_saved_latest_path(latest_file):
     try:
-        with open(v2ray_lastest_file, "r", encoding='utf8') as f:
+        with open(latest_file, "r", encoding="utf8") as f:
             return f.read()
     except:
         return False
 
-def save_v2ray_latest_path(content):
-    with open(v2ray_lastest_file, "w", encoding='utf8') as f:
-        return f.write(content)
 
-def get_clash_latest_path():
-    try:
-        with open(clash_lastest_file, "r", encoding='utf8') as f:
-            return f.read()
-    except:
-        return False
+def save_latest_path(latest_file, content):
+    with open(latest_file, "w", encoding="utf8") as f:
+        f.write(content)
 
-def save_clash_latest_path(content):
-    with open(clash_lastest_file, "w", encoding='utf8') as f:
-        return f.write(content)
+
+def save_to_file(fpath, content):
+    """写入文件，自动创建父目录"""
+    filepath = Path(fpath)
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+    with open(fpath, "w", encoding="utf8") as f:
+        f.write(content)
+
 
 def main():
     dy_list = get_node_dy_url()
-    v2ray_dy_url = dy_list[0]
-    clash_dy_url = dy_list[1]
 
-    local_v2ray_path = get_url_path(v2ray_dy_url)
-    local_clash_path = get_url_path(clash_dy_url)
+    # 检查是否所有类型都已更新
+    all_up_to_date = True
+    for name, cfg in SUB_TYPES.items():
+        idx = cfg["index"]
+        if idx >= len(dy_list):
+            continue
+        remote_path = get_url_path(dy_list[idx])
+        if remote_path != get_saved_latest_path(cfg["latest_file"]):
+            all_up_to_date = False
+            break
 
-    if local_v2ray_path == get_v2ray_latest_path() and local_clash_path == get_clash_latest_path():
+    if all_up_to_date:
         exit(0)
 
-    # local_v2ray_dy = get_local_v2ray_dy()
-    # local_clash_dy = get_local_clash_dy()
-    # if local_clash_dy == network_clash_dy and local_v2ray_dy == network_v2ray_dy:
-    #     exit(-2)
-    else:
-        network_v2ray_dy = get_network_v2ray_dy(v2ray_dy_url)
-        network_clash_dy = get_network_clash_dy(clash_dy_url)
-        # 保存最新日期
-        save_v2ray_latest_path(local_v2ray_path)
-        save_clash_latest_path(local_clash_path)
-        # 日期文件中最新订阅内容
-        v2ray_dy_to_date_file(local_v2ray_path, network_v2ray_dy)
-        clash_dy_to_date_file(local_clash_path, network_clash_dy)
-        # 根目录文件中最新订阅内容
-        v2ray_dy_to_file(network_v2ray_dy)
-        clash_dy_to_file(network_clash_dy)
+    # 下载并保存所有订阅
+    for name, cfg in SUB_TYPES.items():
+        idx = cfg["index"]
+        if idx >= len(dy_list):
+            print(f"警告: dy_list 中缺少 {name} 的订阅链接 (index={idx})")
+            continue
+        dy_url = dy_list[idx]
+        local_path = get_url_path(dy_url)
+
+        content = fetch_subscription(dy_url)
+        save_latest_path(cfg["latest_file"], local_path)  # 记录最新路径
+        save_to_file(local_path, content)                  # 按日期路径保存
+        save_to_file(cfg["dy_file"], content)              # 根目录保存最新内容
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

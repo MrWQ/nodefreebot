@@ -7,6 +7,7 @@
 import requests
 import re
 from pathlib import Path
+from file_section import read_section, write_section
 
 base_url = "https://nodefree.me/"
 node_url = "https://node.nodefree.me/"
@@ -88,17 +89,11 @@ def get_url_path(url):
 
 
 def get_saved_latest_path(latest_file):
-    try:
-        with open(latest_file, "r", encoding="utf8") as f:
-            return f.read()
-    except Exception as e:
-        print(e)
-        return False
+    return read_section(latest_file, "getnode").strip() or False
 
 
 def save_latest_path(latest_file, content):
-    with open(latest_file, "w", encoding="utf8") as f:
-        f.write(content)
+    write_section(latest_file, "getnode", content)
 
 
 def save_to_file(fpath, content):

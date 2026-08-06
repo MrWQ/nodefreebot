@@ -1,0 +1,2063 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#ð èç¹éæ©
+      - https://8.8.8.8/dns-query#ð èç¹éæ©
+proxies:
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 50.62.198.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime39.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 104.18.8.223
+    port: 2083
+    uuid: 0d251504-8b91-4744-8130-412ec76af13f
+    network: ws
+    servername: testcf.motherfuck.dpdns.org
+    tls: true
+    client-fingerprint: random
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: testcf.motherfuck.dpdns.org
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 172.64.156.0
+    port: 443
+    uuid: 29ca503d-e6b8-4509-b666-48133f450857
+    network: ws
+    servername: learn00.evany.de5.net
+    tls: true
+    ws-opts:
+      path: /fdip
+      headers:
+        Host: learn00.evany.de5.net
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+    type: trojan
+    server: 104.16.148.5
+    port: 443
+    password: 19877587-ed94-4033-88cd-4ac50a5e8718
+    sni: dimskiee.biz.id
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /WangCai-8
+    udp: true
+  - name: FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: trojan
+    server: blackshadow.dpdns.org
+    port: 443
+    password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+    sni: support.zoom.us.blackshadow.dpdns.org
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /195.123.218.174-443
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: wx-deu-037.cdnphotos.org
+    port: 443
+    uuid: 77930005-ea92-44dc-9d94-e9192427f519
+    network: http
+    servername: wx-deu-037.cdnphotos.org
+    tls: true
+    client-fingerprint: qq
+    http-opts:
+      path:
+        - /api/v1/
+      headers:
+        Host:
+          - wx-deu-037.cdnphotos.org
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+    type: vmess
+    server: 210.138.37.53
+    port: 443
+    uuid: f23bb427c1f94373876c2f43e9f790f3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: DrBKg16eGf3FZlM3.v.3dns.vip
+    network: ws
+    ws-opts:
+      path: /ws-vmess
+      headers:
+        Host: DrBKg16eGf3FZlM3.v.3dns.vip
+    udp: true
+  - name: è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 170.168.97.5
+    port: 8443
+    uuid: c6f220ed-41f2-21ba-438c-80f05ebbf92a
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 170.168.97.3
+    port: 993
+    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+    type: trojan
+    server: cf.0sm.com
+    port: 443
+    password: 87961f9d-bee1-4377-826b-e169e7891c4f
+    sni: yks-dd9.pages.dev
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vmess
+    server: cindy50.ceoiii.com
+    port: 36801
+    uuid: a6ab6513-6ec3-327f-a068-b89fe72954b8
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: ajax.microsoft.com
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vmess
+    server: cindy50.ceoiii.com
+    port: 36801
+    uuid: a6ab6513-6ec3-327f-a068-b89fe72954b8
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: ajax.microsoft.com
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vmess
+    server: cindy50.ceoiii.com
+    port: 36801
+    uuid: a6ab6513-6ec3-327f-a068-b89fe72954b8
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: ajax.microsoft.com
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vmess
+    server: cindy50.ceoiii.com
+    port: 36801
+    uuid: a6ab6513-6ec3-327f-a068-b89fe72954b8
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: ajax.microsoft.com
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vmess
+    server: cindy50.ceoiii.com
+    port: 36801
+    uuid: a6ab6513-6ec3-327f-a068-b89fe72954b8
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: ajax.microsoft.com
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+    type: vless
+    server: 172.64.146.142
+    port: 8443
+    uuid: 29ca503d-e6b8-4509-b666-48133f450857
+    network: ws
+    servername: learn00.evany.de5.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip
+      headers:
+        Host: learn00.evany.de5.net
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+    type: vless
+    server: cf3.466688.xyz
+    port: 8880
+    uuid: 00ff7e5f-9b6f-4401-aab9-4d044660411f
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: summer-bonus-aa63.52-c03.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+    type: vless
+    server: 63.141.128.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime42.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+    type: trojan
+    server: oplosgru-c.catcat321.com
+    port: 20004
+    password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+    type: vless
+    server: 155.46.167.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime50.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: swcdn.apple.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: grpc
+    servername: dl.google.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: dl.google.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: swcdn.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+    type: hysteria2
+    server: usa1.spectrumproxy.shop
+    port: 443
+    password: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
+    sni: usa1.spectrumproxy.shop
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: swcdn.apple.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: dl.google.com
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+    type: vless
+    server: 170.168.97.3
+    port: 443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: 5e243126-4a2a-84b6-782a-73b14797fb5f
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+    type: vless
+    server: 45.40.149.50
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime39.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+    type: vless
+    server: www.visa.com.sg
+    port: 8880
+    uuid: 81d55675-8570-4b40-9a77-3125339a0f86
+    network: ws
+    tls: false
+    ws-opts:
+      path: /pyip=ProxyIP.KR.CMLiussss.net
+      headers:
+        Host: spring-sound-8d8e.36-9ff.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+    type: trojan
+    server: blackshadow.dpdns.org
+    port: 443
+    password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+    sni: blackshadow.dpdns.org
+    skip-cert-verify: true
+    tls: true
+    ws-opts:
+      path: /195.123.218.174-443
+      headers:
+        Host: blackshadow.dpdns.org
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+    type: vless
+    server: japan.com
+    port: 443
+    uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+    network: ws
+    servername: misaka.cndyw.ggff.net
+    tls: true
+    client-fingerprint: random
+    ws-opts:
+      path: /
+      headers:
+        Host: misaka.cndyw.ggff.net
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+    type: trojan
+    server: oplosgru-c.catcat321.com
+    port: 20034
+    password: 41c406e2-12b5-41f2-a329-d0621052d675
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+    type: trojan
+    server: oplosgru-c.catcat321.com
+    port: 20066
+    password: 41c406e2-12b5-41f2-a329-d0621052d675
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+    type: trojan
+    server: oplosgru-c.catcat321.com
+    port: 20088
+    password: 41c406e2-12b5-41f2-a329-d0621052d675
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+    type: trojan
+    server: hkdcrtc-e.catcat321.com
+    port: 20129
+    password: 41c406e2-12b5-41f2-a329-d0621052d675
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: swcdn.apple.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - swcdn.apple.com
+    reality-opts:
+      public-key: Nnpwm8dqFl9dlMJmg0M9G11vmgCKzNagFTn4tH4sWy4
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+    type: vless
+    server: 88.218.44.4
+    port: 443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: http
+    servername: dl.google.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - download.nvidia.com
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+    type: vless
+    server: 157.22.19.5
+    port: 443
+    uuid: c97b2158-64c9-1f55-8167-72970d347288
+    network: http
+    servername: download.nvidia.com
+    tls: true
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: wcOBPSgoOKptWa9ZHpFpmbrPfLqobBNpCgLH88Ptjhk
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+    type: vmess
+    server: 38.180.219.131
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: apjhdggyx.com
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vmess
+    server: 94.159.108.42
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: apjhdggyx.com
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 176.123.165.103
+    port: 9895
+    uuid: 84cd6acd-48e7-4fcc-8aaf-9c780be8b42c
+    network: http
+    servername: www.apple.com
+    tls: true
+    client-fingerprint: firefox
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - apple.com
+    reality-opts:
+      public-key: tGdHNSrQKQ8Z2J0orn8z_4BtKU8sLvl3bZ_CdCRhi10
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vmess
+    server: 185.223.169.157
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: apjhdggyx.com
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vmess
+    server: 152.228.191.232
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: apjhdggyx.com
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: 176.123.165.103
+    port: 9895
+    uuid: 84cd6acd-48e7-4fcc-8aaf-9c780be8b42c
+    network: http
+    servername: apple.com
+    tls: true
+    client-fingerprint: qq
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: tGdHNSrQKQ8Z2J0orn8z_4BtKU8sLvl3bZ_CdCRhi10
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vmess
+    server: 37.48.90.120
+    port: 443
+    uuid: 5f72f180-b21b-4b7a-8484-240759012604
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: apjhdggyx.com
+    network: ws
+    ws-opts:
+      path: /5f72f180-b21b-4b7a-8484-240759096785
+      headers:
+        Host: apjhdggyx.com
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vless
+    server: 178.17.58.166
+    port: 3443
+    uuid: afb182fa-9b0a-4a1d-9a85-dab179018088
+    network: ws
+    servername: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jr61rsc8fog5f.l6yr5b4ialxnf2ll2zcsgmlqf3u.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+    type: ss
+    server: 195.133.5.207
+    port: 20188
+    cipher: aes-256-gcm
+    password: bdb313adf74c2ede
+    skip-cert-verify: true
+    udp: true
+  - name: RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 77.222.37.89
+    port: 4100
+    uuid: b79c54f3-68e9-4e9d-8b57-22cbbe978730
+    network: ws
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: live.ok.ru
+    skip-cert-verify: true
+    udp: true
+  - name: RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 77.222.37.89
+    port: 2200
+    uuid: b79c54f3-68e9-4e9d-8b57-22cbbe978730
+    network: ws
+    tls: false
+    ws-opts:
+      path: /v1
+      headers:
+        Host: rzd.ru
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 31.76.11.46.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.11.46.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /52872/BNzG4FvIAr
+      headers:
+        Host: 31.76.11.46.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 194.93.0.28
+    port: 443
+    uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+    network: grpc
+    servername: media2.tcpdoor.net
+    tls: true
+    client-fingerprint: safari
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8
+      short-id: 3303c7a5
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 217.163.76.118
+    port: 2086
+    uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+    network: http
+    tls: false
+    http-opts:
+      path:
+        - /
+      headers:
+        Host:
+          - xvh.andishehparenting.com
+    skip-cert-verify: true
+    udp: true
+  - name: PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 31.76.251.127.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.251.127.cdn-one.org
+    tls: true
+    ws-opts:
+      path: /10336/2GCOqG7bvA
+      headers:
+        Host: 31.76.251.127.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 31.76.251.127.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.251.127.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /10336/2GCOqG7bvA
+      headers:
+        Host: 31.76.251.127.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: ddc-akn.astralweb.tech
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 5c192fd7-ef98-4112-a20c-129108fcd7e9
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: ddc-akn.astralweb.tech
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: 31.76.11.46.cdn-one.org
+    port: 443
+    uuid: 2a6b708e-6799-473e-85e9-d4b116c5eedc
+    network: ws
+    servername: 31.76.11.46.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /52872/BNzG4FvIAr
+      headers:
+        Host: 31.76.11.46.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: ð èç¹éæ©
+    type: select
+    proxies:
+      - â»ï¸ èªå¨éæ©
+      - DIRECT
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+  - name: â»ï¸ èªå¨éæ©
+    type: url-test
+    proxies:
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: ð å½å¤åªä½
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+      - ð¯ å¨çç´è¿
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+  - name: ð² çµæ¥ä¿¡æ¯
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+  - name: âï¸ å¾®è½¯æå¡
+    type: select
+    proxies:
+      - ð¯ å¨çç´è¿
+      - ð èç¹éæ©
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+  - name: ð è¹ææå¡
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+  - name: ð¯ å¨çç´è¿
+    type: select
+    proxies:
+      - DIRECT
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+  - name: ð å¨çæ¦æª
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð åºç¨åå
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð æ¼ç½ä¹é±¼
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - â»ï¸ èªå¨éæ©
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)
+      - è¥¿ç­ç(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_7
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_8
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - é¿æä¼¯èåéé¿å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,ð èç¹éæ©
+  - RULE-SET,LocalAreaNetwork,ð¯ å¨çç´è¿
+  - RULE-SET,BanAD,ð å¨çæ¦æª
+  - RULE-SET,BanProgramAD,ð åºç¨åå
+  - RULE-SET,GoogleCN,ð¯ å¨çç´è¿
+  - RULE-SET,SteamCN,ð¯ å¨çç´è¿
+  - RULE-SET,Microsoft,âï¸ å¾®è½¯æå¡
+  - RULE-SET,Apple,ð è¹ææå¡
+  - RULE-SET,ProxyMedia,ð å½å¤åªä½
+  - RULE-SET,Telegram,ð² çµæ¥ä¿¡æ¯
+  - RULE-SET,ProxyLite,ð èç¹éæ©
+  - RULE-SET,ChinaDomain,ð¯ å¨çç´è¿
+  - RULE-SET,ChinaCompanyIp,ð¯ å¨çç´è¿
+  - GEOIP,CN,ð¯ å¨çç´è¿
+  - MATCH,ð æ¼ç½ä¹é±¼

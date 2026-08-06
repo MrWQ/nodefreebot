@@ -1,5 +1,0 @@
-wp-content/uploads/2023/01/6-480x300.jpg
-
-# === getnode_START ===
-wp-content/uploads/2023/01/6-480x300.jpg
-# === getnode_END ===

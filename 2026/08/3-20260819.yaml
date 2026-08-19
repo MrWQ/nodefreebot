@@ -1,0 +1,309 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+  - name: ð«ð·_FR_æ³å½
+    type: vless
+    server: fr.noooo.win
+    port: 443
+    uuid: 7b241232-208d-4d36-857e-913f91b044f4
+    tls: true
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯
+    type: vless
+    server: 47.86.55.200
+    port: 19321
+    uuid: 394086c4-d8a4-4298-9b62-f70fa711082d
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½
+    type: vmess
+    server: 82.198.246.214
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+    type: vmess
+    server: 154.37.223.19
+    port: 56972
+    uuid: ae225455-5e8c-491d-d931-c06ac56f4aee
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: http
+    udp: true
+  - name: ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+    type: vless
+    server: r1.mizulina.top
+    port: 22231
+    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    servername: r1.mizulina.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    skip-cert-verify: true
+    udp: true
+  - name: ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+    type: vless
+    server: 85.234.114.53
+    port: 443
+    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    servername: r1.mizulina.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    skip-cert-verify: true
+    udp: true
+  - name: ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+    type: vmess
+    server: v35.hdacd.com
+    port: 30835
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+    type: vmess
+    server: v10.hdacd.com
+    port: 30807
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_1
+    type: vmess
+    server: 82.198.246.250
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+    type: vless
+    server: 85.234.114.53
+    port: 22231
+    uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+    servername: r1.mizulina.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+    type: trojan
+    server: 90081bb25c.node.tro.cac.cab
+    port: 41943
+    password: 4f4d1167-ef14-4304-9bce-0740472503ef
+    sni: az.01.naiun.bilibili.com
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+    type: vmess
+    server: v36.hdacd.com
+    port: 30836
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_2
+    type: vless
+    server: 47.77.214.201
+    port: 10035
+    uuid: e4e7866d-920b-4a53-a8e2-6ae9b2a42fc2
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_3
+    type: trojan
+    server: 90081bb25c.node.tro.cac.cab
+    port: 48697
+    password: 4f4d1167-ef14-4304-9bce-0740472503ef
+    sni: gh.01.naiun.bilibili.com
+    skip-cert-verify: true
+    tls: false
+    udp: true
+proxy-groups:
+  - name: ð èç¹éæ©
+    type: select
+    proxies:
+      - â»ï¸ èªå¨éæ©
+      - DIRECT
+      - ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ðºð¸_US_ç¾å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ðºð¸_US_ç¾å½_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+      - ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½_3
+  - name: â»ï¸ èªå¨éæ©
+    type: url-test
+    proxies:
+      - ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ðºð¸_US_ç¾å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ðºð¸_US_ç¾å½_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+      - ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½_3
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: ð å½å¤åªä½
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+      - ð¯ å¨çç´è¿
+      - ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ðºð¸_US_ç¾å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ðºð¸_US_ç¾å½_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+      - ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½_3
+  - name: ð² çµæ¥ä¿¡æ¯
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ðºð¸_US_ç¾å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ðºð¸_US_ç¾å½_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+      - ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½_3
+  - name: âï¸ å¾®è½¯æå¡
+    type: select
+    proxies:
+      - ð¯ å¨çç´è¿
+      - ð èç¹éæ©
+      - ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ðºð¸_US_ç¾å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ðºð¸_US_ç¾å½_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+      - ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½_3
+  - name: ð è¹ææå¡
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ðºð¸_US_ç¾å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ðºð¸_US_ç¾å½_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+      - ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½_3
+  - name: ð¯ å¨çç´è¿
+    type: select
+    proxies:
+      - DIRECT
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+  - name: ð å¨çæ¦æª
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð åºç¨åå
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð æ¼ç½ä¹é±¼
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - â»ï¸ èªå¨éæ©
+      - ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ðºð¸_US_ç¾å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_1
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð«ð·_FR_æ³å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ðºð¸_US_ç¾å½_1
+      - ð¬ð§_GB_è±å½->ð¬ðª_GE_æ ¼é²åäº_2
+      - ðºð¸_US_ç¾å½->ð¦ð¿_AZ_é¿å¡æç
+      - ð®ð©_ID_å°åº¦å°¼è¥¿äº->ð¬ð§_GB_è±å½
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½_3

@@ -1,0 +1,683 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+  - name: ð²ð©_MD_æ©å°å¤ç¦
+    type: vless
+    server: rezerv23.yunus.guru
+    port: 443
+    uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
+    servername: rezerv23.yunus.guru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zT7a-PnmIWP4c-G1EDUT3KZ7URi1kc8EppAWPr3h5lk
+      short-id: afeed89ae23b36ed
+    skip-cert-verify: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯
+    type: vmess
+    server: 47.86.167.194
+    port: 800
+    uuid: f2c67cae-c09d-4739-947d-f5302d87a3c0
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: http
+    http-opts:
+      path:
+        - /x
+      headers:
+        Host:
+          - sjskendn.dingtalk.com
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+    type: vmess
+    server: drbkg16egf3fzlm3.v.3dns.vip
+    port: 443
+    uuid: f23bb427c1f94373876c2f43e9f790f3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ws-vmess
+    udp: true
+  - name: ð©ðª_DE_å¾·å½
+    type: vless
+    server: 94.156.122.215
+    port: 8443
+    uuid: ce5b6383-60f2-4aa3-9099-eacb6b01cf2b
+    servername: www.github.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: m8NlVgma3zCfxdXIzMreVvi_O4c2-lZqPh_9UHOsM1I
+      short-id: 99defbf4759b
+    skip-cert-verify: true
+    udp: true
+  - name: ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+    type: vless
+    server: 217.60.193.1
+    port: 443
+    uuid: 5c192fd7-ef98-4112-a20c-129108fcd7e9
+    servername: ddc-akn.astralweb.tech
+    tls: true
+    client-fingerprint: firefox
+    skip-cert-verify: true
+    udp: true
+  - name: ð«ð·_FR_æ³å½
+    type: vless
+    server: 15.237.177.139
+    port: 43248
+    uuid: f9d8ca28-2fff-45de-9b25-3bf29186018e
+    servername: yahoo.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: LPLKpq5_G1WB6BqJhrCKQp1oQly3akbsVjvYPZrbGgg
+      short-id: 3355cf9734b0150e
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+    type: vless
+    server: 199.232.78.159
+    port: 443
+    uuid: 6e2e03e2-4f66-479a-a186-a34d66ca8c91
+    network: ws
+    servername: ssl.fastly.com
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053
+      headers:
+        Host: pan11.global.ssl.fastly.net
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_1
+    type: vless
+    server: 45.80.111.7
+    port: 443
+    uuid: 926bc4cd-709e-4e90-8aa7-78db75fbe86b
+    network: ws
+    servername: 2--ldej--MiTiVPN---MiTiVPN-o.KingNetwork.ir
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/de2---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+      headers:
+        Host: De2-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.KinGNetWork.iR
+    skip-cert-verify: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+    type: trojan
+    server: hkdcrtc-e.catcat321.com
+    port: 20041
+    password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+    sni: de.catxstar.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+    type: vmess
+    server: m01c7b2z26dtqgee.v.3dns.vip
+    port: 443
+    uuid: f23bb427c1f94373876c2f43e9f790f3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ws-vmess
+    udp: true
+  - name: ð¨ð­_CH_çå£«
+    type: vless
+    server: 199.68.196.79
+    port: 443
+    uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+    servername: ch.tunnelx.space
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
+      short-id: 10a5c8e2f4b7d936
+    skip-cert-verify: true
+    udp: true
+  - name: ð¨ð­_CH_çå£«_1
+    type: vless
+    server: ch.tunnelx.space
+    port: 443
+    uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+    servername: ch.tunnelx.space
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: q_lfutznS1iTS7bGphTIGMYVeht-8clcf_IfzIf4mBQ
+      short-id: 10a5c8e2f4b7d936
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_2
+    type: vless
+    server: 159.195.139.217
+    port: 8443
+    uuid: 48267e65-8bf0-4046-923f-4ee967009344
+    servername: sellflow.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    skip-cert-verify: true
+    udp: true
+  - name: ðªð¸_ES_è¥¿ç­ç
+    type: vless
+    server: 46.28.71.104
+    port: 2053
+    uuid: 504d0b6e-400d-45ec-b2d0-1c79006ebc16
+    servername: web.abubibabu.ru
+    tls: true
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ
+      short-id: 0858af97f4e7324d
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½
+    type: vless
+    server: 88.218.44.4
+    port: 993
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_1
+    type: vless
+    server: 217.177.75.7
+    port: 443
+    uuid: ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2
+    servername: usa.tunnelx.space
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: 6INA8Jxa9oQT3XrW4uXd0leo2upMdUn8s_XbSP0qB3I
+      short-id: f0a9d2b1c7e4f648
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_3
+    type: vless
+    server: 31.76.11.46.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.11.46.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /52872/BNzG4FvIAr
+      headers:
+        Host: 31.76.11.46.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_4
+    type: vless
+    server: 185.126.67.76
+    port: 443
+    uuid: b6f3b292-00c9-430e-bc4c-b1294bd895c0
+    servername: cdn-de-4.ai-apiroute.cc
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: kaw2U8L2ZTcgo56qUBONfylYJpHprI_CgZfv1I4q2Sc
+      short-id: b512d49930874a31
+    skip-cert-verify: true
+    udp: true
+  - name: ð³ð±_NL_è·å°
+    type: vless
+    server: 31.76.79.118
+    port: 2444
+    uuid: fc1ee51e-72ec-4af0-ab0f-540c9e22427b
+    servername: www.cloudflare.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: JsSTmS0VKNaHF-_QKYS-_utnS-LJuPOBrWcMbVE2RDA
+      short-id: 0809f782a29a2030
+    skip-cert-verify: true
+    udp: true
+  - name: ðµð±_PL_æ³¢å°
+    type: vless
+    server: pl01.auragg.org
+    port: 25224
+    uuid: 6af3672b-8994-4cf1-aa15-23ce6574ebf0
+    network: grpc
+    servername: cloudflare.com
+    tls: true
+    client-fingerprint: qq
+    grpc-opts:
+      grpc-service-name: auragrpc
+    reality-opts:
+      public-key: uXV7VKWM7wlzSVCp1MxVMQHJJ3GvjJmVCMPqw_vIZUs
+      short-id: e7c3f9a2b6d4f8e1
+    skip-cert-verify: true
+    udp: true
+  - name: ð¨ð¿_CZ_æ·å
+    type: vless
+    server: 141.133.172.222
+    port: 20342
+    uuid: 5eecb34f-c905-4c77-b7fb-d830b451cd11
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_5
+    type: vless
+    server: 159.195.201.235
+    port: 25310
+    uuid: 6af3672b-8994-4cf1-aa15-23ce6574ebf0
+    network: grpc
+    servername: cloudflare.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: auragrpc
+    reality-opts:
+      public-key: 3Ow1WhWHN1nUEkOR4kThVpzEuvlcB5ZrqoBcHtJGyiY
+      short-id: a3d8f1e9b2c7d4e6
+    skip-cert-verify: true
+    udp: true
+  - name: ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+    type: vless
+    server: ddc-akn.astralweb.tech
+    port: 443
+    uuid: 04b9e828-43ed-4faf-8952-41069ec08355
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+    type: vmess
+    server: v9.hdacd.com
+    port: 30809
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+    type: vless
+    server: www.true.th
+    port: 80
+    uuid: 89c3b66f-c849-4602-a5a8-84b6f06af478
+    network: ws
+    servername: d2pwbkmfr5lxa4.cloudfront.net
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: d2pwbkmfr5lxa4.cloudfront.net
+    skip-cert-verify: true
+    udp: true
+  - name: ð²ð°_MK_MK
+    type: vless
+    server: 195.144.24.84
+    port: 443
+    uuid: b6f3b292-00c9-430e-bc4c-b1294bd895c0
+    servername: cdn-mk.ai-apiroute.cc
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: PCF6GYA_TCdb28mM6zsxJ38MAtmnSrJJEygkXvrt1AE
+      short-id: b512d49930874a31
+    skip-cert-verify: true
+    udp: true
+  - name: ðµð±_PL_æ³¢å°_1
+    type: vless
+    server: 31.76.251.127.cdn-one.org
+    port: 443
+    uuid: 4f375fb4-3c95-425f-bc7b-8085487a6f3c
+    network: ws
+    servername: 31.76.251.127.cdn-one.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /10336/2GCOqG7bvA
+      headers:
+        Host: 31.76.251.127.cdn-one.org
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_2
+    type: vless
+    server: 104.17.21.32
+    port: 8880
+    uuid: 300f44af-adb8-42b7-b869-bef70b205d7e
+    network: ws
+    tls: false
+    ws-opts:
+      path: /pyip=ProxyIP.KR.CMLiussss.net
+      headers:
+        Host: icy-rice-3c1c.340-680.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: ð²ð©_MD_æ©å°å¤ç¦_1
+    type: vless
+    server: 176.123.2.210
+    port: 443
+    uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
+    servername: rezerv23.yunus.guru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: zT7a-PnmIWP4c-G1EDUT3KZ7URi1kc8EppAWPr3h5lk
+      short-id: afeed89ae23b36ed
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_3
+    type: vmess
+    server: guanwang.awsno.com
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: ð èç¹éæ©
+    type: select
+    proxies:
+      - â»ï¸ èªå¨éæ©
+      - DIRECT
+      - ð²ð©_MD_æ©å°å¤ç¦
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð©ðª_DE_å¾·å½
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+      - ð«ð·_FR_æ³å½
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_1
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ð¨ð­_CH_çå£«
+      - ð¨ð­_CH_çå£«_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½_3
+      - ð©ðª_DE_å¾·å½_4
+      - ð³ð±_NL_è·å°
+      - ðµð±_PL_æ³¢å°
+      - ð¨ð¿_CZ_æ·å
+      - ð©ðª_DE_å¾·å½_5
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+      - ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+      - ð²ð°_MK_MK
+      - ðµð±_PL_æ³¢å°_1
+      - ðºð¸_US_ç¾å½_2
+      - ð²ð©_MD_æ©å°å¤ç¦_1
+      - ðºð¸_US_ç¾å½_3
+  - name: â»ï¸ èªå¨éæ©
+    type: url-test
+    proxies:
+      - ð²ð©_MD_æ©å°å¤ç¦
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð©ðª_DE_å¾·å½
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+      - ð«ð·_FR_æ³å½
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_1
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ð¨ð­_CH_çå£«
+      - ð¨ð­_CH_çå£«_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½_3
+      - ð©ðª_DE_å¾·å½_4
+      - ð³ð±_NL_è·å°
+      - ðµð±_PL_æ³¢å°
+      - ð¨ð¿_CZ_æ·å
+      - ð©ðª_DE_å¾·å½_5
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+      - ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+      - ð²ð°_MK_MK
+      - ðµð±_PL_æ³¢å°_1
+      - ðºð¸_US_ç¾å½_2
+      - ð²ð©_MD_æ©å°å¤ç¦_1
+      - ðºð¸_US_ç¾å½_3
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: ð å½å¤åªä½
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+      - ð¯ å¨çç´è¿
+      - ð²ð©_MD_æ©å°å¤ç¦
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð©ðª_DE_å¾·å½
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+      - ð«ð·_FR_æ³å½
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_1
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ð¨ð­_CH_çå£«
+      - ð¨ð­_CH_çå£«_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½_3
+      - ð©ðª_DE_å¾·å½_4
+      - ð³ð±_NL_è·å°
+      - ðµð±_PL_æ³¢å°
+      - ð¨ð¿_CZ_æ·å
+      - ð©ðª_DE_å¾·å½_5
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+      - ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+      - ð²ð°_MK_MK
+      - ðµð±_PL_æ³¢å°_1
+      - ðºð¸_US_ç¾å½_2
+      - ð²ð©_MD_æ©å°å¤ç¦_1
+      - ðºð¸_US_ç¾å½_3
+  - name: ð² çµæ¥ä¿¡æ¯
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - ð²ð©_MD_æ©å°å¤ç¦
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð©ðª_DE_å¾·å½
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+      - ð«ð·_FR_æ³å½
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_1
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ð¨ð­_CH_çå£«
+      - ð¨ð­_CH_çå£«_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½_3
+      - ð©ðª_DE_å¾·å½_4
+      - ð³ð±_NL_è·å°
+      - ðµð±_PL_æ³¢å°
+      - ð¨ð¿_CZ_æ·å
+      - ð©ðª_DE_å¾·å½_5
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+      - ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+      - ð²ð°_MK_MK
+      - ðµð±_PL_æ³¢å°_1
+      - ðºð¸_US_ç¾å½_2
+      - ð²ð©_MD_æ©å°å¤ç¦_1
+      - ðºð¸_US_ç¾å½_3
+  - name: âï¸ å¾®è½¯æå¡
+    type: select
+    proxies:
+      - ð¯ å¨çç´è¿
+      - ð èç¹éæ©
+      - ð²ð©_MD_æ©å°å¤ç¦
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð©ðª_DE_å¾·å½
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+      - ð«ð·_FR_æ³å½
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_1
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ð¨ð­_CH_çå£«
+      - ð¨ð­_CH_çå£«_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½_3
+      - ð©ðª_DE_å¾·å½_4
+      - ð³ð±_NL_è·å°
+      - ðµð±_PL_æ³¢å°
+      - ð¨ð¿_CZ_æ·å
+      - ð©ðª_DE_å¾·å½_5
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+      - ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+      - ð²ð°_MK_MK
+      - ðµð±_PL_æ³¢å°_1
+      - ðºð¸_US_ç¾å½_2
+      - ð²ð©_MD_æ©å°å¤ç¦_1
+      - ðºð¸_US_ç¾å½_3
+  - name: ð è¹ææå¡
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - ð²ð©_MD_æ©å°å¤ç¦
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð©ðª_DE_å¾·å½
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+      - ð«ð·_FR_æ³å½
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_1
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ð¨ð­_CH_çå£«
+      - ð¨ð­_CH_çå£«_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½_3
+      - ð©ðª_DE_å¾·å½_4
+      - ð³ð±_NL_è·å°
+      - ðµð±_PL_æ³¢å°
+      - ð¨ð¿_CZ_æ·å
+      - ð©ðª_DE_å¾·å½_5
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+      - ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+      - ð²ð°_MK_MK
+      - ðµð±_PL_æ³¢å°_1
+      - ðºð¸_US_ç¾å½_2
+      - ð²ð©_MD_æ©å°å¤ç¦_1
+      - ðºð¸_US_ç¾å½_3
+  - name: ð¯ å¨çç´è¿
+    type: select
+    proxies:
+      - DIRECT
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+  - name: ð å¨çæ¦æª
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð åºç¨åå
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð æ¼ç½ä¹é±¼
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - â»ï¸ èªå¨éæ©
+      - ð²ð©_MD_æ©å°å¤ç¦
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_1
+      - ð©ðª_DE_å¾·å½
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½
+      - ð«ð·_FR_æ³å½
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_1
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð©ðª_DE_å¾·å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯_2
+      - ð¨ð­_CH_çå£«
+      - ð¨ð­_CH_çå£«_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½_3
+      - ð©ðª_DE_å¾·å½_4
+      - ð³ð±_NL_è·å°
+      - ðµð±_PL_æ³¢å°
+      - ð¨ð¿_CZ_æ·å
+      - ð©ðª_DE_å¾·å½_5
+      - ð¦ðª_AE_é¿æä¼¯èåéé¿å½->ð©ðª_DE_å¾·å½_1
+      - ð¨ð³_CN_ä¸­å½->ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð©ðª_DE_å¾·å½->ð¹ð­_TH_æ³°å½
+      - ð²ð°_MK_MK
+      - ðµð±_PL_æ³¢å°_1
+      - ðºð¸_US_ç¾å½_2
+      - ð²ð©_MD_æ©å°å¤ç¦_1
+      - ðºð¸_US_ç¾å½_3

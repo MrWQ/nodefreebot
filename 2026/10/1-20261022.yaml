@@ -1,0 +1,5484 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+      - https://1.1.1.1/dns-query#ð èç¹éæ©
+      - https://8.8.8.8/dns-query#ð èç¹éæ©
+proxies:
+  - name: VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 103.161.178.205
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 103.199.19.132
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 104.21.91.244
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cart/docs/www/proxyip=108.160.132.132?ed
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 104.21.91.244
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cart/docs/www/proxyip=108.160.132.132?ed#Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+    network: ws
+    servername: kv.074167.xyz
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: kv.074167.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+    type: vless
+    server: 63.141.128.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime42.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+    type: vless
+    server: 162.159.130.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+    type: vless
+    server: 216.24.57.1
+    port: 443
+    uuid: 974c2588-c1cd-43ac-8823-ce3d879b09fd
+    network: ws
+    servername: somersby.pt.ex33r.eu.cc
+    tls: true
+    ws-opts:
+      path: /id-amz
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+    type: vless
+    server: 162.159.130.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+    type: vless
+    server: 23.227.39.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime17.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+    type: vless
+    server: 179.255.99.95
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+    type: vless
+    server: 162.159.130.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+    type: vless
+    server: 162.159.135.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+    type: vless
+    server: www.speedtest.net
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+    type: vless
+    server: 179.255.99.57
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+    type: vless
+    server: 172.64.150.43
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=unsafe
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+    type: vless
+    server: 207.246.105.197
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    tls: true
+    ws-opts:
+      path: /fdipfp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+    type: vless
+    server: 141.98.41.80
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?TELEGRAM-TOOTFFARANGI
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+    type: vless
+    server: 80.93.202.40
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime02.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+    type: vless
+    server: www.speedtest.net
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560#Telegram---bored_vpn
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+    type: vless
+    server: 203.88.117.190
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+    type: vless
+    server: 154.21.197.32
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+    type: vless
+    server: 172.64.150.43
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=unsafe
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+    type: vless
+    server: 172.64.150.43
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: fp=unsafe
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+    type: vless
+    server: 172.64.150.43
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+    type: vless
+    server: 172.64.150.43
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+    type: vless
+    server: 203.88.117.227
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+    type: vless
+    server: 92.53.189.40
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    tls: false
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime19.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+    type: vless
+    server: 45.61.149.205
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?Telegram---bored_vpn
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdipfp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+    type: vless
+    server: 141.98.41.20
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: fp=unsafe
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdipfp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+    type: vless
+    server: 185.148.104.30
+    port: 8880
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: 185.148.104.30
+    tls: false
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: vms.lifetime51.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+    type: vless
+    server: 188.114.97.6
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    client-fingerprint: firefox
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+    type: vless
+    server: 104.17.147.22
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+    type: vless
+    server: 104.17.147.22
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+    type: vless
+    server: 104.17.148.22
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+    type: vless
+    server: 45.61.149.205
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?Telegram---mehrosaboran
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+    type: vless
+    server: 52.26.119.209
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chromefp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+    type: vless
+    server: 162.159.130.234
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+    type: vless
+    server: 207.246.105.197
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+    type: vless
+    server: 179.253.246.191
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+    type: vless
+    server: 162.35.127.65
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+    type: vless
+    server: 103.161.178.72
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+    type: vless
+    server: 141.98.233.6
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+    type: vless
+    server: pl-a50baf0d7f.shamanapp.online
+    port: 443
+    uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+    network: xhttp
+    servername: pl-a50baf0d7f.shamanapp.online
+    tls: true
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+    xhttp-opts:
+      path: /ShamanXHTTP2026
+      host: pl-a50baf0d7f.shamanapp.online
+      mode: stream-up
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+    type: vless
+    server: 104.17.148.22
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+    type: vless
+    server: 185.239.48.154
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+    type: vless
+    server: 194.55.164.118
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+    type: vless
+    server: 188.240.213.98
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+    type: vless
+    server: 193.36.95.34
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chromefp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+    type: vless
+    server: 94.20.154.66
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?Telegram---TEHRANARGO
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?TELEGRAM-TOOTFFARANGIfp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /cart/docs/www/proxyip?ed
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+    type: vless
+    server: 114.129.9.132
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+    type: vless
+    server: 188.114.98.0
+    port: 443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?TELEGRAM--i10VPN?ed
+      headers:
+        Host: lucasjow.us.ci
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+    type: vless
+    server: 194.135.119.82
+    port: 2053
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+    type: vless
+    server: 104.17.147.22
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+    type: vless
+    server: 172.67.155.65
+    port: 8443
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    network: ws
+    servername: lucasjow.us.ci
+    tls: true
+    ws-opts:
+      path: /cart/docs/www/proxyip
+      headers:
+        Host: lucasjow.us.ci
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+    type: vless
+    server: 203.88.117.227
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+    type: vless
+    server: 141.98.41.20
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=unsafe
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+    type: anytls
+    server: er8u54dh.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: px.ads.linkedin.com
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+    type: anytls
+    server: er8u54dh.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: px.ads.linkedin.com
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 216.195.195.205
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=unsafe
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+    network: ws
+    servername: kv.074167.xyz
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: kv.074167.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 175.41.179.37
+    port: 51262
+    uuid: 6c6ea474-0cf5-4a3d-bc81-aa2eeb6516d6
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vless
+    server: 194.127.192.138
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: 84.32.22.205
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: 103.161.178.215
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+    type: vless
+    server: 5.223.70.20
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+    type: vless
+    server: 47.131.104.124
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+    type: vless
+    server: 139.162.62.195
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+    type: vless
+    server: 178.93.160.236
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+    type: vless
+    server: 194.127.192.138
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 139.100.226.187
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 139.100.226.187
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 212.60.4.134
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 104.245.245.16
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 104.245.245.16
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 104.245.245.16
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 104.245.245.16
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    client-fingerprint: firefox
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 130.78.190.134
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 130.78.190.134
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 103.102.228.113
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 130.78.190.134
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    client-fingerprint: chrome
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: 193.36.95.34
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 123.111.169.70
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 146.56.151.92
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 193.122.115.184
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 141.164.44.60
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 158.247.222.168
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+    type: hysteria2
+    server: 130.162.134.218
+    port: 20000
+    password: C0DD7bgChaltqnh/T2az6ijM
+    sni: rmgyvpn.rest
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: C0DD7bgChaltqnh/T2az6ijM
+    ports: 20000-30000
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: 146.56.151.92
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vless
+    server: 141.164.44.60
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: 193.122.115.184
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: 185.71.230.237
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 56656
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: cdn-dynmedia-1.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: QFM3jTzb5n-E9L2cfFo6GHqioGmIkjmG60l8wXA4IXc
+      short-id: aae6d935
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 56656
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: cdn-dynmedia-1.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: QFM3jTzb5n-E9L2cfFo6GHqioGmIkjmG60l8wXA4IXc
+      short-id: aae6d935
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 178.239.117.133
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 60.130.209.253
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 60.130.209.253
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: 60.130.209.253
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 46105
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: www.lamer.com.sg
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik
+      short-id: 28f5c1f8f98a
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 46105
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: www.lamer.com.sg
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik
+      short-id: 28f5c1f8f98a
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 46105
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: www.lamer.com.sg
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Lk5nwDxC2tr3J7hT8emhUUiMX8cHyKX9TiRj_EnAiik
+      short-id: 28f5c1f8f98a
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 47672
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: us1p1.xn--ghq880n3na965a.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: tBvlo8F8hKRXSK-EHRAfzEH-x3e4uvheGloO-9bPKx4
+      short-id: 70ab6d813e
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 34379
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: us1p1.xn--ghq880n3na965a.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA
+      short-id: e51285e3
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+    type: vless
+    server: 43.174.195.1
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+    type: vless
+    server: 193.36.95.34
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+    type: vless
+    server: 103.31.77.108
+    port: 2053
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+    type: vless
+    server: 216.238.54.114
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+    type: vless
+    server: 43.165.180.254
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+    type: vless
+    server: 104.105.140.77
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+    type: vless
+    server: 161.248.62.26
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+    type: vless
+    server: 104.105.128.249
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+    type: vless
+    server: 138.2.41.8
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+    type: vless
+    server: 2.56.175.179
+    port: 9443
+    uuid: 8179d7cc-82bc-4eae-a97f-5d30c6c2a812
+    network: grpc
+    servername: itunes.apple.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: 8bhS-nnIN67a292RpJsCPzXQy4CzpzOVLTPn5CiAFyg
+      short-id: 6ba7b810
+    skip-cert-verify: true
+    udp: true
+  - name: JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+    type: vless
+    server: 82.148.1.89
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560fp=chromefp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+    type: anytls
+    server: 56481.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    sni: images.ctfassets.net
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 103.101.0.73
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 103.39.78.118
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: 104.17.148.22
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: 216.23.93.27
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vless
+    server: epam.com
+    port: 443
+    uuid: e53eacb6-cd30-4964-a57c-febcb5151b98
+    network: ws
+    servername: wallweb-4r0.pages.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: dey.lnmarketplace.net
+    port: 443
+    uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+    network: xhttp
+    servername: dey.lnmarketplace.net
+    tls: true
+    client-fingerprint: firefox
+    alpn:
+      - h2
+    xhttp-opts:
+      path: /kavir
+      host: dey.lnmarketplace.net
+      mode: stream-one
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: 62.72.163.108
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+    type: vless
+    server: 83.229.120.10
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+    type: vless
+    server: 83.229.120.10
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+    type: anytls
+    server: 654968169.df6h451rh.xin
+    port: 443
+    password: 0324fbc29561
+    skip-cert-verify: true
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+    type: vless
+    server: 5.188.33.40
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+    type: vless
+    server: 193.200.130.20
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 104.194.140.26
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 104.194.140.26
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 57.129.130.34
+    port: 52014
+    uuid: 53367702-4b8d-431a-a193-34d7d057a065
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 57.131.153.153
+    port: 2053
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 2.28.42.209
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 178.105.113.205
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 178.105.215.151
+    port: 2053
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 2.28.42.209
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 188.245.191.19
+    port: 2040
+    uuid: bdd897a6-57f2-4311-835f-0b6c5ac5a1a2
+    network: ws
+    servername: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: 9qohadlkywguh.hlf9x1796lkopyju2kplt9c9smz1vyuv0u8azzk.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: 5.75.195.83
+    port: 56879
+    uuid: 7b0f8733-03cc-472b-9c50-ed159b48ef59
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: 103.13.211.236
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vless
+    server: 152.53.197.166
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: 155.117.234.52
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: 89.127.210.245
+    port: 2053
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+    type: vless
+    server: 45.95.0.43
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+    type: vless
+    server: 31.70.89.136
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+    type: vless
+    server: 93.127.223.238
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+    type: vless
+    server: 144.31.181.177
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+    type: vless
+    server: 178.105.133.160
+    port: 4443
+    uuid: fb0818b3-4031-4843-b5f7-1d75177a1758
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+    type: vless
+    server: 62.133.60.134
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+    type: vless
+    server: 185.230.44.140
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+    type: vless
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    servername: cdn.tbank.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
+      short-id: e0215064d8d1fd7c
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+    type: vless
+    server: 78.17.178.125
+    port: 443
+    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+    servername: cdn.tbank.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
+      short-id: e0215064d8d1fd7c
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+    type: vless
+    server: 63.186.127.80
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+    type: vless
+    server: 45.157.233.109
+    port: 2087
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+    type: vless
+    server: 155.117.234.52
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+    type: vless
+    server: 152.53.197.166
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+    type: vless
+    server: 138.124.54.223
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+    type: vless
+    server: 91.107.189.117
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+    type: vless
+    server: 209.38.254.20
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+    type: vless
+    server: 31.70.89.136
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chromefp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+    type: vless
+    server: 31.59.216.141
+    port: 443
+    uuid: c6cfcc53-9271-4ef7-88c5-5141621c8db1
+    servername: 193.23.216.239.cdn-one.org
+    tls: true
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 7zsU1U-30jh-qqfmqZukMfoqHB75ksKFA5aQFi8LGW4
+      short-id: 70b4ca
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+    type: vless
+    server: 188.245.191.19
+    port: 2040
+    uuid: d30ba47d-596b-4087-9fa6-a2c9bf4dbe1d
+    network: ws
+    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /@Marisa_kristi
+      headers:
+        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+    type: vless
+    server: 2.28.42.209
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+    type: vless
+    server: 144.31.181.177
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+    type: vless
+    server: 89.127.210.245
+    port: 2053
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+    type: vless
+    server: 45.95.0.43
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+    type: hysteria2
+    server: 158.178.137.129
+    port: 20000
+    password: b42d90fa667942aebc734d60
+    sni: rmgyvpn.rest
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: b42d90fa667942aebc734d60
+    ports: 20000-30000
+    udp: true
+  - name: AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+    type: hysteria2
+    server: 137.23.3.91
+    port: 20000
+    password: a34f3990b69f44bfa0d32385
+    sni: rmgyvpn.rest
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: a34f3990b69f44bfa0d32385
+    ports: 20000-30000
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 103.161.178.215
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: fp=unsafe
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 103.161.179.36
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 103.161.178.205
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 103.161.179.171
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 103.161.179.171
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+    type: vless
+    server: 103.161.178.215
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+    type: vless
+    server: 103.161.178.215
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+    type: vless
+    server: 103.161.178.72
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+    type: vless
+    server: 103.161.178.72
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+    type: vless
+    server: 103.161.178.205
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+    type: vless
+    server: 103.161.178.215
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 62.72.163.108
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 103.161.178.205
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 103.161.178.205
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 185.239.48.154
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 185.71.230.237
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 194.55.166.65
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: çå£«(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 138.124.36.67
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: è¡èç(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 195.133.92.228
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 216.238.79.164
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 216.238.79.164
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    alpn:
+      - h3
+      - h2
+    skip-cert-verify: true
+    udp: true
+  - name: é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 166.88.194.74
+    port: 2087
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: æ·å(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 95.182.94.128
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 95.182.95.237
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 141.98.233.6
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 13.140.29.253
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+    type: vless
+    server: 13.140.29.253
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+    type: vless
+    server: 104.152.48.248
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+    type: vless
+    server: 13.140.29.45
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+    type: vless
+    server: 104.152.48.248
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 110.172.148.33
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    ws-opts:
+      path: /fp=chromefp=chrome
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+  - name: ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+    type: vless
+    server: 114.129.9.132
+    port: 8443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    servername: snip.edgeoneai.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+      headers:
+        Host: snip.edgeoneai.cc.cd
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: ð èç¹éæ©
+    type: select
+    proxies:
+      - â»ï¸ èªå¨éæ©
+      - DIRECT
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+      - æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+      - å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - çå£«(mibei77.com ç±³è´èç¹åäº«)
+      - è¡èç(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+      - é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+      - æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+      - å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+      - ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+  - name: â»ï¸ èªå¨éæ©
+    type: url-test
+    proxies:
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+      - æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+      - å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - çå£«(mibei77.com ç±³è´èç¹åäº«)
+      - è¡èç(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+      - é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+      - æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+      - å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+      - ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: ð å½å¤åªä½
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+      - ð¯ å¨çç´è¿
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+      - æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+      - å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - çå£«(mibei77.com ç±³è´èç¹åäº«)
+      - è¡èç(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+      - é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+      - æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+      - å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+      - ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+  - name: ð² çµæ¥ä¿¡æ¯
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+      - æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+      - å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - çå£«(mibei77.com ç±³è´èç¹åäº«)
+      - è¡èç(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+      - é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+      - æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+      - å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+      - ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+  - name: âï¸ å¾®è½¯æå¡
+    type: select
+    proxies:
+      - ð¯ å¨çç´è¿
+      - ð èç¹éæ©
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+      - æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+      - å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - çå£«(mibei77.com ç±³è´èç¹åäº«)
+      - è¡èç(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+      - é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+      - æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+      - å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+      - ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+  - name: ð è¹ææå¡
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+      - æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+      - å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - çå£«(mibei77.com ç±³è´èç¹åäº«)
+      - è¡èç(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+      - é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+      - æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+      - å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+      - ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+  - name: ð¯ å¨çç´è¿
+    type: select
+    proxies:
+      - DIRECT
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+  - name: ð å¨çæ¦æª
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð åºç¨åå
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð æ¼ç½ä¹é±¼
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - â»ï¸ èªå¨éæ©
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)
+      - VNè¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_33
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_34
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_35
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_36
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_37
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_38
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_39
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_40
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_41
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_42
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_43
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_44
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_45
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_46
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_47
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_48
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_49
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_50
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_51
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_52
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_53
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_54
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_55
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_56
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_57
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_58
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_59
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_60
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_61
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_62
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_63
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_64
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_65
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_66
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_67
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_68
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_69
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_70
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_71
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_72
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_73
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_74
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_75
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_76
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_77
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_78
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_79
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_80
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_81
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_82
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_83
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_84
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_85
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_86
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_87
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_88
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_89
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_90
+      - USç¾å½(mibei77.com ç±³è´èç¹åäº«)_91
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)
+      - TWå°æ¹¾(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_1
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_2
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_3
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_4
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_5
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_6
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_7
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_8
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_9
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_10
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_11
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_12
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_13
+      - SGæ°å å¡(mibei77.com ç±³è´èç¹åäº«)_14
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - RUä¿ç½æ¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - PLæ³¢å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_1
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_2
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_3
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_4
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_5
+      - NLè·å°(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - KRé©å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_1
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_2
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_3
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_4
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_5
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_6
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_7
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_8
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_9
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_10
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_11
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_12
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_13
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_14
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_15
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_16
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_17
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_18
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_19
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_20
+      - JPæ¥æ¬(mibei77.com ç±³è´èç¹åäº«)_21
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_1
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_2
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_3
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_4
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_5
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_6
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_7
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_8
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_9
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_10
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_11
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_12
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_13
+      - HKé¦æ¸¯(mibei77.com ç±³è´èç¹åäº«)_14
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - GBè±å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - FRæ³å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_1
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_2
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_3
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_4
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_5
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_6
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_7
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_8
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_9
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_10
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_11
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_12
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_13
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_14
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_15
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_16
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_17
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_18
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_19
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_20
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_21
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_22
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_23
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_24
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_25
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_26
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_27
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_28
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_29
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_30
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_31
+      - DEå¾·å½(mibei77.com ç±³è´èç¹åäº«)_32
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - AUæ¾³å¤§å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_1
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_2
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_3
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_4
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_5
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_6
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_7
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_8
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_9
+      - è¶å(mibei77.com ç±³è´èç¹åäº«)_10
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_1
+      - çº¦æ¦(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä»¥è²å(mibei77.com ç±³è´èç¹åäº«)
+      - æ°è¥¿å°(mibei77.com ç±³è´èç¹åäº«)
+      - å¡æµ¦è·¯æ¯(mibei77.com ç±³è´èç¹åäº«)
+      - çå£«(mibei77.com ç±³è´èç¹åäº«)
+      - è¡èç(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)
+      - å¢¨è¥¿å¥(mibei77.com ç±³è´èç¹åäº«)_1
+      - é©¬æ¥è¥¿äº(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)
+      - æ·å(mibei77.com ç±³è´èç¹åäº«)_1
+      - æ¯å©æ¶(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_1
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_2
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_3
+      - ä¿å å©äº(mibei77.com ç±³è´èç¹åäº«)_4
+      - å¥¥å°å©(mibei77.com ç±³è´èç¹åäº«)
+      - ç±æ²å°¼äº(mibei77.com ç±³è´èç¹åäº«)
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - DOMAIN-SUFFIX,nodebuf.com,ð èç¹éæ©
+  - RULE-SET,LocalAreaNetwork,ð¯ å¨çç´è¿
+  - RULE-SET,BanAD,ð å¨çæ¦æª
+  - RULE-SET,BanProgramAD,ð åºç¨åå
+  - RULE-SET,GoogleCN,ð¯ å¨çç´è¿
+  - RULE-SET,SteamCN,ð¯ å¨çç´è¿
+  - RULE-SET,Microsoft,âï¸ å¾®è½¯æå¡
+  - RULE-SET,Apple,ð è¹ææå¡
+  - RULE-SET,ProxyMedia,ð å½å¤åªä½
+  - RULE-SET,Telegram,ð² çµæ¥ä¿¡æ¯
+  - RULE-SET,ProxyLite,ð èç¹éæ©
+  - RULE-SET,ChinaDomain,ð¯ å¨çç´è¿
+  - RULE-SET,ChinaCompanyIp,ð¯ å¨çç´è¿
+  - GEOIP,CN,ð¯ å¨çç´è¿
+  - MATCH,ð æ¼ç½ä¹é±¼

@@ -40,7 +40,7 @@ dns:
 proxies:
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4
-    server: 202.50.253.54
+    server: 202.50.253.72
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -48,7 +48,7 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (2)
-    server: 202.50.253.63
+    server: 202.50.253.81
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
@@ -56,79 +56,96 @@ proxies:
     skip-cert-verify: false
   - type: ss
     name: 🇮🇹_IT_意大利_IPV4 (3)
+    server: 202.50.253.99
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (4)
+    server: 202.50.253.45
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (5)
+    server: 202.50.253.54
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (6)
+    server: 202.50.253.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (7)
+    server: 202.50.253.63
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (8)
     server: 202.50.253.90
     port: 19999
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     cipher: aes-256-gcm
     tls: false
     skip-cert-verify: false
-  - type: ssr
-    name: 🇳🇱_NL_荷兰_IPV4
-    server: 109.104.153.43
-    port: 33336
-    password: dongtaiwang.com
-    cipher: chacha20-ietf
-    obfs: tls1.2_ticket_auth
-    protocol: auth_chain_a
-  - type: trojan
-    name: v2go | 🇫🇷 FR | TROJAN | 409_IPV4
-    server: 104.18.8.83
-    port: 443
-    password: humanity
-    tls: true
-    servername: www.calmlunch.com
-    sni: www.calmlunch.com
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (9)
+    server: 202.50.253.36
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
     skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /assignment
-      headers:
-        Host: www.calmlunch.com
-  - type: trojan
+  - type: ss
+    name: 🇮🇹_IT_意大利_IPV4 (10)
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+    tls: false
+    skip-cert-verify: false
+  - type: hysteria
     name: 🇫🇷_FR_法国_IPV4
-    server: 172.67.231.254
-    port: 443
-    password: humanity
+    server: 163.172.117.163
+    port: 36699
+    password: dongtaiwang.com
     tls: true
-    servername: www.calmlunch.com
-    sni: www.calmlunch.com
+    servername: bing.com
+    sni: bing.com
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /assignment
-      headers:
-        Host: www.calmlunch.com
-  - type: trojan
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: hysteria
     name: 🇺🇸_US_美国_IPV4
-    server: 172.66.0.172
-    port: 443
-    password: humanity
+    server: 198.200.57.142
+    port: 22335
+    password: github.com/Alvin9999-newpac/fanqiang
     tls: true
-    servername: www.cordweave.com
-    sni: www.cordweave.com
+    servername: bing.com
+    sni: bing.com
     skip-cert-verify: true
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /assignment
-  - type: trojan
-    name: 🇰🇷_KR_韩国_IPV4
-    server: 3.34.91.121
-    port: 12308
-    password: 3637190e-4ce3-41cd-9425-f5676345b38c
-    tls: true
-    servername: kr02.ulifeai.com
-    sni: kr02.ulifeai.com
-    skip-cert-verify: true
-  - type: trojan
-    name: 🇺🇸_US_美国_IPV4 (2)
-    server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-    port: 443
-    password: 6cddea99-9b18-4d42-8638-131bd9f5374f
-    tls: true
-    servername: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-    sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: github.com/Alvin9999-newpac/fanqiang
   - type: hysteria
     name: 🇩🇪_DE_德国_IPV4
     server: 5.83.129.90
@@ -143,55 +160,154 @@ proxies:
     up: "11"
     down: "55"
     auth-str: dongtaiwang.com
-  - type: vless
-    name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-    server: edge.bookmai.com
-    port: 443
-    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-    flow: xtls-rprx-vision
+  - type: hysteria
+    name: 🇫🇷_FR_法国_IPV4 (2)
+    server: 62.210.28.175
+    port: 24667
+    password: dongtaiwang.com
     tls: true
-    servername: mother-earth.fyi
-    sni: mother-earth.fyi
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  - type: vless
-    name: 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-    server: 9.247.23.209
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: vmess
+    name: 🇺🇸_US_美国_IPV4 (2)
+    server: 172.66.0.1
     port: 443
-    uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-    flow: xtls-rprx-vision
+    uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+    cipher: auto
+    alterId: 0
     tls: true
-    servername: mother-earth.fyi
-    sni: mother-earth.fyi
+    servername: vmess.lbw666.dpdns.org
+    sni: vmess.lbw666.dpdns.org
+    network: ws
+    ws-opts:
+      path: /ws
+      headers:
+        Host: vmess.lbw666.dpdns.org
+  - type: wireguard
+    name: 🇨🇳_CN_中国_IPV4
+    server: 162.159.195.4
+    port: 2371
+    password: CBMxaub4dG7Q9W91x4+lUCqtF9eV1BN+4osBfWZNXHs=
+    tls: false
     skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+    private-key: CBMxaub4dG7Q9W91x4+lUCqtF9eV1BN+4osBfWZNXHs=
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    mtu: 1380
+    ip: 172.16.0.2/32
+    reserved:
+      - 225
+      - 17
+      - 205
+  - type: hysteria
+    name: 🇺🇸_US_美国_IPV4 (3)
+    server: 137.175.82.44
+    port: 20022
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "11"
+    down: "55"
+    auth-str: dongtaiwang.com
+  - type: hysteria
+    name: 🇺🇸_US_美国_IPV4 (4)
+    server: 137.175.82.43
+    port: 20022
+    password: dongtaiwang.com
+    tls: true
+    servername: bing.com
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    up: "20"
+    down: "20"
+    auth-str: dongtaiwang.com
   - type: ssr
-    name: 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
-    server: api.meituan88.com
-    port: 27561
-    password: di15PV
-    cipher: rc4-md5
-    obfs: plain
-    protocol: auth_aes128_md5
-    protocol-param: 218522:0hfCJk
-    obfs-param: 6f5218522.douyin.com
-  - type: trojan
-    name: 🇩🇪_DE_德国_IPV4 (2)
-    server: 45.80.111.7
+    name: 🇺🇸_US_美国_IPV4 (5)
+    server: ssr2.762988.xyz
+    port: 33336
+    password: dongtaiwang.com
+    cipher: chacha20-ietf
+    obfs: tls1.2_ticket_auth
+    protocol: auth_chain_a
+  - type: vmess
+    name: 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
+    server: 172.67.190.164
     port: 443
-    password: humanity
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
     tls: true
-    servername: www.calmlunch.com
-    sni: www.calmlunch.com
-    skip-cert-verify: false
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
     client-fingerprint: chrome
     network: ws
     ws-opts:
-      path: /assignment
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: trojan
+    name: 🇩🇪_DE_德国_IPV4 (2)
+    server: 191.44.112.170.sslip.io
+    port: 443
+    password: 46d221fa-e9b4-748c-4eae-019a88e42991
+    tls: true
+    servername: orbylume.my.to
+    sni: orbylume.my.to
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /tvpn-trojan/bg
+      headers:
+        Host: orbylume.my.to
+  - type: trojan
+    name: 🇯🇵_JP_日本_IPV4
+    server: 185.220.238.77
+    port: 11543
+    password: HutaoCloud
+    tls: true
+    servername: 185.220.238.77
+    sni: 185.220.238.77
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api
+  - type: vmess
+    name: "@DeltaKroneckerGithub_3021_IPV4"
+    server: 172.64.145.93
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    cipher: auto
+    alterId: 0
+    tls: true
+    servername: guanwang.awsno.com
+    sni: guanwang.awsno.com
+    network: ws
+    ws-opts:
+      path: /hls/cctv5phd.m3u8
+      headers:
+        Host: guanwang.awsno.com
+  - type: vmess
+    name: 🇨🇳_CN_中国_IPV4 (2)
+    server: 39.108.113.127
+    port: 10086
+    uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+    cipher: auto
+    alterId: 0
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -201,34 +317,54 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
-      - 🇳🇱_NL_荷兰_IPV4
-      - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
-      - 🇰🇷_KR_韩国_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
       - 🇩🇪_DE_德国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-      - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇨🇳_CN_中国_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
       - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇯🇵_JP_日本_IPV4
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇨🇳_CN_中国_IPV4 (2)
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
-      - 🇳🇱_NL_荷兰_IPV4
-      - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
-      - 🇰🇷_KR_韩国_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
       - 🇩🇪_DE_德国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-      - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇨🇳_CN_中国_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
       - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇯🇵_JP_日本_IPV4
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇨🇳_CN_中国_IPV4 (2)
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -241,17 +377,27 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
-      - 🇳🇱_NL_荷兰_IPV4
-      - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
-      - 🇰🇷_KR_韩国_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
       - 🇩🇪_DE_德国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-      - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇨🇳_CN_中国_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
       - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇯🇵_JP_日本_IPV4
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇨🇳_CN_中国_IPV4 (2)
   - name: 📲 电报信息
     type: select
     proxies:
@@ -260,17 +406,27 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
-      - 🇳🇱_NL_荷兰_IPV4
-      - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
-      - 🇰🇷_KR_韩国_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
       - 🇩🇪_DE_德国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-      - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇨🇳_CN_中国_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
       - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇯🇵_JP_日本_IPV4
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇨🇳_CN_中国_IPV4 (2)
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -279,17 +435,27 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
-      - 🇳🇱_NL_荷兰_IPV4
-      - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
-      - 🇰🇷_KR_韩国_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
       - 🇩🇪_DE_德国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-      - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇨🇳_CN_中国_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
       - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇯🇵_JP_日本_IPV4
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇨🇳_CN_中国_IPV4 (2)
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -298,17 +464,27 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
-      - 🇳🇱_NL_荷兰_IPV4
-      - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
-      - 🇰🇷_KR_韩国_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
       - 🇩🇪_DE_德国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-      - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇨🇳_CN_中国_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
       - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇯🇵_JP_日本_IPV4
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇨🇳_CN_中国_IPV4 (2)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -334,17 +510,27 @@ proxy-groups:
       - 🇮🇹_IT_意大利_IPV4
       - 🇮🇹_IT_意大利_IPV4 (2)
       - 🇮🇹_IT_意大利_IPV4 (3)
-      - 🇳🇱_NL_荷兰_IPV4
-      - v2go | 🇫🇷 FR | TROJAN | 409_IPV4
+      - 🇮🇹_IT_意大利_IPV4 (4)
+      - 🇮🇹_IT_意大利_IPV4 (5)
+      - 🇮🇹_IT_意大利_IPV4 (6)
+      - 🇮🇹_IT_意大利_IPV4 (7)
+      - 🇮🇹_IT_意大利_IPV4 (8)
+      - 🇮🇹_IT_意大利_IPV4 (9)
+      - 🇮🇹_IT_意大利_IPV4 (10)
       - 🇫🇷_FR_法国_IPV4
       - 🇺🇸_US_美国_IPV4
-      - 🇰🇷_KR_韩国_IPV4
-      - 🇺🇸_US_美国_IPV4 (2)
       - 🇩🇪_DE_德国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4
-      - 🇩🇪_DE_德国->🇫🇷_FR_法国_IPV4 (2)
-      - 🇭🇰_HK_香港->🇺🇸_US_美国_IPV4
+      - 🇫🇷_FR_法国_IPV4 (2)
+      - 🇺🇸_US_美国_IPV4 (2)
+      - 🇨🇳_CN_中国_IPV4
+      - 🇺🇸_US_美国_IPV4 (3)
+      - 🇺🇸_US_美国_IPV4 (4)
+      - 🇺🇸_US_美国_IPV4 (5)
+      - 🇺🇸 机场推荐:dafei.de 美国 15_IPV4
       - 🇩🇪_DE_德国_IPV4 (2)
+      - 🇯🇵_JP_日本_IPV4
+      - "@DeltaKroneckerGithub_3021_IPV4"
+      - 🇨🇳_CN_中国_IPV4 (2)
 rule-providers:
   LocalAreaNetwork:
     type: http

@@ -1,0 +1,507 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+  - name: ð¦ð²_AM_äºç¾å°¼äº
+    type: vless
+    server: 2.56.204.183
+    port: 443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+  - name: ð¹ð¼_TW_ä¸­å½å°æ¹¾
+    type: vmess
+    server: 654168416355441.oylfmxz.cn
+    port: 443
+    uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    udp: true
+  - name: ðªð¸_ES_è¥¿ç­ç
+    type: vless
+    server: 152.114.195.163
+    port: 8443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½
+    type: vless
+    server: 66.33.22.221
+    port: 15262
+    uuid: 9edfe008-51a5-48ee-ae99-945971227100
+    network: ws
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_1
+    type: vless
+    server: 172.67.130.159
+    port: 2096
+    uuid: 550d6eb0-1775-44a4-a464-9176e3d74b50
+    network: ws
+    servername: cdn-us.skyvora.app
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /0i027asku
+      headers:
+        Host: cdn-us.skyvora.app
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½
+    type: vless
+    server: de777.lavivas.org
+    port: 7444
+    uuid: 44e1105d-b46e-402f-933b-eaa136fcbb24
+    tls: true
+    flow: xtls-rprx-vision
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_1
+    type: vless
+    server: gesmankos.sadiepinki.com
+    port: 443
+    uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+    servername: gesmankos.sadiepinki.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
+      short-id: 4fa44664f6a566d3
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_2
+    type: vless
+    server: 2.59.134.226
+    port: 443
+    uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
+    servername: rich-falcon.cdn.cachefleet.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: 1sSmdw90uTiGuitDvp_q8zcXTcHXKQS3IVjA7T1UNiY
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_2
+    type: vless
+    server: 72.56.41.33
+    port: 40443
+    uuid: 5be7fb02-b6a5-450f-b041-3243b98e8420
+    servername: deepl.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: Uvj5H9pDJP0HX2bN7NN7sCQwVCrC5N2NbKf-yuy1ikE
+      short-id: ee33
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+    type: vless
+    server: a2.arshia-nova.ir
+    port: 443
+    uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
+    network: ws
+    servername: ssl.fastly.com
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /
+      headers:
+        Host: c12.com
+    skip-cert-verify: true
+    udp: true
+  - name: ð©ðª_DE_å¾·å½_3
+    type: vless
+    server: 45.95.96.236
+    port: 443
+    uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+    servername: gesmankos.sadiepinki.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
+      short-id: 4fa44664f6a566d3
+    skip-cert-verify: true
+    udp: true
+  - name: ðµð±_PL_æ³¢å°
+    type: vless
+    server: 103.167.234.26
+    port: 443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_3
+    type: vless
+    server: 66.33.22.219
+    port: 27534
+    uuid: 55333b48-43d2-40f5-99ef-982046bdf437
+    network: ws
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+    type: vless
+    server: 103.143.81.178
+    port: 443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+  - name: ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+    type: vless
+    server: 202.166.187.132
+    port: 443
+    uuid: 8be20011-59b1-4118-91ed-83e8e6b662cd
+    network: ws
+    servername: f.yoptybla.ru
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: f.yoptybla.ru
+    skip-cert-verify: true
+    udp: true
+  - name: ð¯ðµ_JP_æ¥æ¬
+    type: vless
+    server: 35.72.179.15
+    port: 443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+  - name: ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+    type: vless
+    server: 104.143.204.23
+    port: 8443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+  - name: ðºð¸_US_ç¾å½_4
+    type: vless
+    server: 104.21.78.105
+    port: 443
+    uuid: a1a6a3be-2bf9-46a2-bc24-328306e49ab7
+    network: ws
+    servername: 6-m17.KUWaiT.kdNs.fR
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /fVs1qv0xm8dxmnwuaPwokxgY4XlP
+      headers:
+        Host: 6-M17.kuwAit.kDns.Fr
+    skip-cert-verify: true
+    udp: true
+  - name: ð¨ð³_CN_ä¸­å½
+    type: vmess
+    server: 112.132.215.108
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: ð­ð°_HK_ä¸­å½é¦æ¸¯
+    type: vless
+    server: 103.101.0.73
+    port: 443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+  - name: ð²ð©_MD_æ©å°å¤ç¦
+    type: vless
+    server: 185.153.198.86
+    port: 443
+    uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+    network: ws
+    servername: shuma.ccwu.cc
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: shuma.ccwu.cc
+    skip-cert-verify: true
+    udp: true
+proxy-groups:
+  - name: ð èç¹éæ©
+    type: select
+    proxies:
+      - â»ï¸ èªå¨éæ©
+      - DIRECT
+      - ð¦ð²_AM_äºç¾å°¼äº
+      - ð¹ð¼_TW_ä¸­å½å°æ¹¾
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½
+      - ð©ðª_DE_å¾·å½_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_3
+      - ðµð±_PL_æ³¢å°
+      - ðºð¸_US_ç¾å½_3
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+      - ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+      - ð¯ðµ_JP_æ¥æ¬
+      - ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+      - ðºð¸_US_ç¾å½_4
+      - ð¨ð³_CN_ä¸­å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð²ð©_MD_æ©å°å¤ç¦
+  - name: â»ï¸ èªå¨éæ©
+    type: url-test
+    proxies:
+      - ð¦ð²_AM_äºç¾å°¼äº
+      - ð¹ð¼_TW_ä¸­å½å°æ¹¾
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½
+      - ð©ðª_DE_å¾·å½_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_3
+      - ðµð±_PL_æ³¢å°
+      - ðºð¸_US_ç¾å½_3
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+      - ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+      - ð¯ðµ_JP_æ¥æ¬
+      - ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+      - ðºð¸_US_ç¾å½_4
+      - ð¨ð³_CN_ä¸­å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð²ð©_MD_æ©å°å¤ç¦
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: ð å½å¤åªä½
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+      - ð¯ å¨çç´è¿
+      - ð¦ð²_AM_äºç¾å°¼äº
+      - ð¹ð¼_TW_ä¸­å½å°æ¹¾
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½
+      - ð©ðª_DE_å¾·å½_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_3
+      - ðµð±_PL_æ³¢å°
+      - ðºð¸_US_ç¾å½_3
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+      - ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+      - ð¯ðµ_JP_æ¥æ¬
+      - ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+      - ðºð¸_US_ç¾å½_4
+      - ð¨ð³_CN_ä¸­å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð²ð©_MD_æ©å°å¤ç¦
+  - name: ð² çµæ¥ä¿¡æ¯
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - ð¦ð²_AM_äºç¾å°¼äº
+      - ð¹ð¼_TW_ä¸­å½å°æ¹¾
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½
+      - ð©ðª_DE_å¾·å½_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_3
+      - ðµð±_PL_æ³¢å°
+      - ðºð¸_US_ç¾å½_3
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+      - ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+      - ð¯ðµ_JP_æ¥æ¬
+      - ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+      - ðºð¸_US_ç¾å½_4
+      - ð¨ð³_CN_ä¸­å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð²ð©_MD_æ©å°å¤ç¦
+  - name: âï¸ å¾®è½¯æå¡
+    type: select
+    proxies:
+      - ð¯ å¨çç´è¿
+      - ð èç¹éæ©
+      - ð¦ð²_AM_äºç¾å°¼äº
+      - ð¹ð¼_TW_ä¸­å½å°æ¹¾
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½
+      - ð©ðª_DE_å¾·å½_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_3
+      - ðµð±_PL_æ³¢å°
+      - ðºð¸_US_ç¾å½_3
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+      - ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+      - ð¯ðµ_JP_æ¥æ¬
+      - ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+      - ðºð¸_US_ç¾å½_4
+      - ð¨ð³_CN_ä¸­å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð²ð©_MD_æ©å°å¤ç¦
+  - name: ð è¹ææå¡
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - ð¦ð²_AM_äºç¾å°¼äº
+      - ð¹ð¼_TW_ä¸­å½å°æ¹¾
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½
+      - ð©ðª_DE_å¾·å½_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_3
+      - ðµð±_PL_æ³¢å°
+      - ðºð¸_US_ç¾å½_3
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+      - ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+      - ð¯ðµ_JP_æ¥æ¬
+      - ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+      - ðºð¸_US_ç¾å½_4
+      - ð¨ð³_CN_ä¸­å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð²ð©_MD_æ©å°å¤ç¦
+  - name: ð¯ å¨çç´è¿
+    type: select
+    proxies:
+      - DIRECT
+      - ð èç¹éæ©
+      - â»ï¸ èªå¨éæ©
+  - name: ð å¨çæ¦æª
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð åºç¨åå
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: ð æ¼ç½ä¹é±¼
+    type: select
+    proxies:
+      - ð èç¹éæ©
+      - ð¯ å¨çç´è¿
+      - â»ï¸ èªå¨éæ©
+      - ð¦ð²_AM_äºç¾å°¼äº
+      - ð¹ð¼_TW_ä¸­å½å°æ¹¾
+      - ðªð¸_ES_è¥¿ç­ç
+      - ðºð¸_US_ç¾å½
+      - ðºð¸_US_ç¾å½_1
+      - ð©ðª_DE_å¾·å½
+      - ð©ðª_DE_å¾·å½_1
+      - ð©ðª_DE_å¾·å½_2
+      - ðºð¸_US_ç¾å½_2
+      - ðºð¸_US_ç¾å½->ð«ð®_FI_è¬å°
+      - ð©ðª_DE_å¾·å½_3
+      - ðµð±_PL_æ³¢å°
+      - ðºð¸_US_ç¾å½_3
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯->ð¸ð¬_SG_æ°å å¡
+      - ð¦ðº_AU_æ¾³å¤§å©äº->ð«ð®_FI_è¬å°
+      - ð¯ðµ_JP_æ¥æ¬
+      - ð¹ð·_TR_åè³å¶->ð³ð±_NL_è·å°
+      - ðºð¸_US_ç¾å½_4
+      - ð¨ð³_CN_ä¸­å½
+      - ð­ð°_HK_ä¸­å½é¦æ¸¯
+      - ð²ð©_MD_æ©å°å¤ç¦
